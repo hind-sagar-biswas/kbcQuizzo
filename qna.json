@@ -1,4 +1,4 @@
-[
+data = [
 		{
 			"question" : "Isn't this a question?",
 			"answer" : "correct answer",

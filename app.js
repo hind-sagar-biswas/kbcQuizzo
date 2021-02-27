@@ -13,10 +13,9 @@ const loader = document.getElementById("loader");
 
 
 //JSON FETCH
-fetch('qna.json')
-  .then(response => response.json())
-  .then(data => {qnaData = data.['data']); console.log(data.['data']);});
-totalScore = qnaData.length;
+
+qnaData = data;
+
 
 //FUNCTIONS
 function updateQuestion() {
@@ -103,7 +102,9 @@ function shuffle(array) {
 }
 
 function preLoad() {
-	loader.style = 'pointer-events: none; opacity: 0';
+	setTimeout(function() {
+	loader.style = 'pointer-events: none; opacity: 0;'
+	}, 5500);
 }
 
 function write() {
@@ -147,6 +148,7 @@ setInterval(rollDice, 6000);
 
 //MAIN FLOW
 questionSet = 0;
+totalScore = qnaData.length;
 currentScore = 0;
 quizNotFinished = true;
 
