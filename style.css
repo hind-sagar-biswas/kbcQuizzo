@@ -1,0 +1,155 @@
+:root{
+	--primary: ;
+	--secondary: #55acff;
+	--background: #0a1640;
+	--text: white;
+	--success: #24f100;
+	--danger: #f13b13;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+body{
+	width: 100vw;
+	min-height: 100vh;
+	font-family: sans-serif;
+	font-size: 15px;
+	color: var(--text);
+	background: var(--background);
+}
+ul#options li{
+	list-style-type: none;
+	padding: 0.5em 1em;
+	margin: 0.5em 1em;
+	border-radius: 5px;
+	border: 2px solid var(--secondary);
+	transition: all 0.3s;
+}
+#question-box{
+	max-width: 450px;
+	position: relative;
+	padding: 10px;
+}
+#qna-box{
+	width: 100%;
+	border: 3px solid var(--secondary);
+	border-radius: 5px;
+}
+#questionHolder{
+	color: var(--secondary);
+	margin: 0.5em 1em;
+}
+#options{
+	display: grid;
+	grid-template-columns: 50% 50%;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.correct{
+	background: var(--success);
+	border: 3px solid var(--success) !important;
+}
+.incorrect{
+	background: var(--danger);
+	border: 3px solid var(--danger) !important;
+}
+#next-box{
+	padding: 1em 0;
+	display: none;
+	transition: all 0.3s;
+}
+#next-box button{
+	width: 100%;
+	height: 50px;
+	background: var(--secondary);
+	color: var(--background);
+	border: none;
+	border-radius: 5px;
+}
+.disabled{
+	opacity:0.5;
+	pointer-events: none;
+}
+#start-box{
+	background: var(--secondary);
+	color: var(--background);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	transition: all 0.3s;
+}
+#start-box center{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+#start-box center button{
+	height: 50px;
+	width: 150px;
+	background: var(--background);
+	color: var(--text);
+	border: none;
+	border-radius: 5px;
+}
+#loader{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: var(--secondary);
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.6s;
+}
+#dice{
+	animation: diceSpin 1s linear 7;
+}
+
+#scoreBoard{
+	width: 100%;
+	height: 70px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--secondary);
+	color: var(--text);
+	border-radius: 5px;
+	margin: 0 0 10px 0;
+}
+#totalScore,
+#currentScore{
+	display: inline-block;
+	padding: 0.5em;
+	border-radius: 5px;
+	background: var(--background);
+	color: var(--secondary);
+	text-align: center;
+}
+
+
+#scoreBoard #title{flex:1;}
+
+@keyframes diceSpin{
+	0%{transform: rotate(0deg);}
+	90%{transform: rotate(0deg);}
+	100%{transform: rotate(180deg);}
+}
+
+@media(max-width: 768px){
+	#options{
+	grid-template-columns: 100%;
+}
+}

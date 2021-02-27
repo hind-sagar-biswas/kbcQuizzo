@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>KBC</title>
+	
+	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+	
+	<link rel="stylesheet" href="style.css">
+	
+	<script src="app.js" defer></script>
+</head>
+<body>
+	<section id="loader">
+		<h1 style="font-size:3rem"><i class="fas" id="dice"></i></h1>
+		<h1><span id="welcome"></span></h1>
+	</section>
+	<section id="question-box">
+		<div id="scoreBoard">
+			<h2><span id="title">SCORE </span><span id="currentScore">0</span> | <span id="totalScore"></span></h2>
+		</div>
+		<div style="position:relative;">
+			<div id="qna-box">
+				<h4 id="questionHolder"> <span id="questionNumber"></span>. <span id="question"></span></h4>
+				<ul id="options"></ul>
+			</div>
+			<div id="start-box">
+				<center>
+					<h1>Are you Ready?</h1>
+					<button onclick="document.getElementById('start-box').style = 'pointer-events: none; opacity: 0;'">YES</button>
+				</center>
+			</div>
+		</div>
+		
+		<div id="next-box">
+			<button onclick="updateQuestion()">Next</button>
+		</div>
+	</section>
+	
+</body>
+</html>
