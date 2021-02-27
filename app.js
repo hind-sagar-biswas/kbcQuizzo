@@ -16,7 +16,7 @@ const loader = document.getElementById("loader");
 fetch('qna.json')
   .then(response => response.json())
   .then(data => {qnaData = data; console.log(data);});
-//qnaData = JSON.parse(data);
+totalScore = qnaData.length;
 
 //FUNCTIONS
 function updateQuestion() {
@@ -147,7 +147,6 @@ setInterval(rollDice, 6000);
 
 //MAIN FLOW
 questionSet = 0;
-totalScore = qnaData.length;
 currentScore = 0;
 quizNotFinished = true;
 
@@ -157,6 +156,5 @@ totalScoreBoard.innerHTML = totalScore;
 shuffle(qnaData);
 updateQuestion();
 
-typeWriter("LOADING.....", "welcome", 90);
-
 window.addEventListener("load", preLoad());
+typeWriter("LOADING.....", "welcome", 90);
