@@ -13,6 +13,7 @@ const loader = document.getElementById("loader");
 
 
 //JSON FETCH
+
 qnaData = data;
 
 
