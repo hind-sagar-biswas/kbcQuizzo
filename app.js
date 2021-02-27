@@ -13,10 +13,10 @@ const loader = document.getElementById("loader");
 
 
 //JSON FETCH
-fetch('https://hind-sagar-biswas.github.io/kbcQuizo/qna.json')
-  .then(response => response.json())
-  .then(data => {qnaData = JSON.parse(data)});
-
+//fetch('https://hind-sagar-biswas.github.io/kbcQuizo/qna.json')
+//  .then(response => response.json())
+//  .then(data => {qnaData = JSON.parse(data)});
+qnaData = JSON.parse(data);
 
 //FUNCTIONS
 function updateQuestion() {
