@@ -103,9 +103,7 @@ function shuffle(array) {
 }
 
 function preLoad() {
-	setTimeout(function() {
-	loader.style = 'pointer-events: none; opacity: 0;'
-	}, 6);
+	loader.style = 'pointer-events: none; opacity: 0';
 }
 
 function write() {
@@ -159,5 +157,6 @@ totalScoreBoard.innerHTML = totalScore;
 shuffle(qnaData);
 updateQuestion();
 
-window.addEventListener("load", preLoad());
 typeWriter("LOADING.....", "welcome", 90);
+
+window.addEventListener("load", preLoad());
