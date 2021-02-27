@@ -13,10 +13,8 @@ const loader = document.getElementById("loader");
 
 
 //JSON FETCH
-//fetch('https://hind-sagar-biswas.github.io/kbcQuizo/qna.json')
-//  .then(response => response.json())
-//  .then(data => {qnaData = JSON.parse(data)});
-qnaData = JSON.parse(data);
+qnaData = data;
+
 
 //FUNCTIONS
 function updateQuestion() {
@@ -103,7 +101,9 @@ function shuffle(array) {
 }
 
 function preLoad() {
-	loader.style = 'pointer-events: none; opacity: 0';
+	setTimeout(function() {
+	loader.style = 'pointer-events: none; opacity: 0;'
+	}, 5500);
 }
 
 function write() {
@@ -157,6 +157,5 @@ totalScoreBoard.innerHTML = totalScore;
 shuffle(qnaData);
 updateQuestion();
 
-typeWriter("LOADING.....", "welcome", 90);
-
 window.addEventListener("load", preLoad());
+typeWriter("LOADING.....", "welcome", 90);
