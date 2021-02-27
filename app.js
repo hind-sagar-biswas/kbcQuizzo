@@ -15,7 +15,7 @@ const loader = document.getElementById("loader");
 //JSON FETCH
 fetch('qna.json')
   .then(response => response.json())
-  .then(data => {qnaData = JSON.parse(data)});
+  .then(data => {qnaData = data; console.log(data);});
 //qnaData = JSON.parse(data);
 
 //FUNCTIONS
