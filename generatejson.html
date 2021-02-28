@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="language" content="english"> 
+	<meta http-equiv="content-type" content="text/html">
+    
+	<meta name="format-detection" content="telephone=yes"/>
+	<meta name="HandheldFriendly" content="true"/> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<title>Generate JSON - KBC Quizzo</title>
+	<link rel="stylesheet" href="generatejson.css">
+	
+	<script src="generatejson.js" defer></script>
+</head>
+<body>
+	<header>
+		<h1>JSON code generator for <a href="https://github.com/hind-sagar-biswas/kbcQuizzo" style="color:#121625;">KBC Quizzo</a></h1>
+ 		<hr>
+	</header>
+ <section>
+	<form id="generator" name="generator" onsubmit="return generateCode()">
+		<h2>Generator</h2>
+		<div class="inputContainer">
+			<label for="question">Question</label>
+			<br>
+			<input id="question" name="question" type="text" autocomplete="off" required>
+		</div>
+		<div class="inputContainer">
+			<label for="answer">Answer</label>
+			<br>
+			<input id="answer" name="answer" type="text" autocomplete="off" required>
+		</div>
+		<div class="inputContainer">
+			<label for="options">Other Options</label>
+			<p style="color:grey; font-size:12px;">[Add Three more options, Separate Options with semi-colon(;), Don't use full stop at the end]</p>
+			<input id="options" name="options" type="text" autocomplete="off" required>
+		</div>
+		<div class="inputContainer">
+			<button id="generate">Add Question</button>
+		</div>
+	</form>
+	<br>
+	<div id="outputContainer">
+		<h2>JSON Code</h2>
+		<xmp id="output">		{
+			"question" : "The question?",
+			"answer" : "correct answer",
+			"otherOptions" : [
+				"option 1",
+				"option 2",
+				"option 3"
+			]
+		}</xmp>
+	</div>
+ </section>
+</body>
+</html>
