@@ -3,6 +3,26 @@ A JavaScript Quiz/Trivia Application
 
 ## Questions for Quiz
 
+### Question Info
+
+Every Question has 1 correct answer along with 3 more options and are categorized under few Categories and further have subcategories. Questions are also divided based on difficulty.
+
+### Valid Categories and Subcategories
+
+The valid Categories and Subcategories currently present are:
+
+Category | Subcategory
+-----------------------
+science | chemistry, chem, physics, phy, biology", bio
+ict | software, website, web, programming, prog, security
+mathematics | general, higher
+literaure | bangla, bng, english, eng, hindi, hnd
+grammer | bangla, bng, english, eng, hindi, hnd
+history | international, bangladesh, india
+general knowledge | null
+
+_**Note:** These are just current validated categories and sub categories. If you want or suggest any new category or subcategory then please create an Issue_
+
 ### Question storage
 
 Questions are stored in `qna.json` file in the `/root` directory as JSON.
@@ -13,6 +33,10 @@ Questions are stored in `qna.json` file in the `/root` directory as JSON.
 data = [
 	{
 		"question" : "A valid question?",
+		"category" : "category of the question",
+		"subCategory" : "sub
+category of the question",
+		"difficulty" : "easy", // or hard or medium
 		"answer" : "correct answer",
 		"otherOptions" : [
 			"option 1",
@@ -22,6 +46,10 @@ data = [
 	},
 	{
 		"question" : "Another valid question?",
+		"category" : "category of the question",
+		"subCategory" : "sub
+category of the question",
+		"difficulty" : "easy",
 		"answer" : "correct answer",
 		"otherOptions" : [
 			"option 1",
@@ -61,8 +89,12 @@ To add the codes, follow the steps below:
    data = [
    	{
    		"question" : "A valid question?",
-		"answer" : "correct answer",
-      		"otherOptions" : [
+			"category" : "category",
+			"subCategory" : "sub
+category",
+			"difficulty" : "easy",
+			"answer" : "correct answer",
+     "otherOptions" : [
    			"option 1",
    			"option 2",
    			"option 3"
