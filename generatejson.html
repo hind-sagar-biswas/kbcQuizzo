@@ -10,6 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<title>Generate JSON - KBC Quizzo</title>
+	
+	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
 	<link rel="stylesheet" href="generatejson.css">
 	
 	<script src="generatejson.js" defer></script>
@@ -17,6 +20,12 @@
 <body>
 	<header>
 		<h1>JSON code generator for <a href="https://github.com/hind-sagar-biswas/kbcQuizzo" style="color:#121625;">KBC Quizzo</a></h1>
+		<ul>HELP?
+			<a href="https://github.com/hind-sagar-biswas/kbcQuizzo#json-code-generator"><li><i class="fas
+fa-info-circle"></i> How to add the JSON Code?</li></a>
+			<a href="https://github.com/hind-sagar-biswas/kbcQuizzo#valid-categories-and-subcategories"><li><i class="fas
+fa-info-circle"></i> What are the valid Sub Categories?</li></a>
+		</ul>
  		<hr>
 	</header>
  <section>
@@ -26,6 +35,33 @@
 			<label for="question">Question</label>
 			<br>
 			<input id="question" name="question" type="text" autocomplete="off" required>
+		</div>
+		<div class="inputContainer">
+			<label for="category">Category</label>
+			<br>
+			<select id="category" name="category">
+				<option value="science">Science</option>
+				<option value="ict">ICT</option>
+				<option value="literature">Literature</option>
+				<option value="grammer">Grammer</option>
+				<option value="history">History</option>
+				<option value="mathematics">Mathematics</option>
+				<option value="generalKnowledge">General Knowledge</option>
+			</select>
+		</div>
+		<div class="inputContainer">
+			<label for="subCategory">Sub Category</label>
+			<br>
+			<input id="subCategory" name="subCategory" type="text" autocomplete="off" required>
+		</div>
+		<div class="inputContainer">
+			<label for="difficulty">Difficulty</label>
+			<br>
+			<select id="difficulty" name="difficulty">
+				<option value="easy">Easy</option>
+				<option value="medium">Meadium</option>
+				<option value="hard">Hard</option>
+			</select>
 		</div>
 		<div class="inputContainer">
 			<label for="answer">Answer</label>
@@ -46,6 +82,9 @@
 		<h2>JSON Code</h2>
 		<xmp id="output">		{
 			"question" : "The question?",
+			"category" : "category",
+			"subCategory" : "sub
+category",
 			"answer" : "correct answer",
 			"otherOptions" : [
 				"option 1",
