@@ -90,8 +90,7 @@ To add the codes, follow the steps below:
    	{
    		"question" : "A valid question?",
 			"category" : "category",
-			"subCategory" : "sub
-category",
+			"subCategory" : "sub category",
 			"difficulty" : "easy",
 			"answer" : "correct answer",
      "otherOptions" : [
