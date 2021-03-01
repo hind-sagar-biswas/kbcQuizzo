@@ -1,4 +1,9 @@
+<p align="center">
+  <img width="200" src="images/Quizzo.png">
+</p>
+
 # kbcQuizzo
+
 A JavaScript Quiz/Trivia Application
 
 ## Questions for Quiz
