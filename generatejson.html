@@ -52,7 +52,12 @@ fa-info-circle"></i> What are the valid Sub Categories?</li></a>
 		<div class="inputContainer">
 			<label for="subCategory">Sub Category</label>
 			<br>
-			<input id="subCategory" name="subCategory" type="text" autocomplete="off" required>
+			<input list="subcategoryDatalist" id="subCategory" name="subCategory" type="text" autocomplete="off" required>
+			<datalist id="subcategoryDatalist">
+				<option value="physics"></option>
+				<option value="chemistry"></option>
+				<option value="biology"></option>
+			</datalist>
 		</div>
 		<div class="inputContainer">
 			<label for="difficulty">Difficulty</label>
@@ -83,8 +88,7 @@ fa-info-circle"></i> What are the valid Sub Categories?</li></a>
 		<xmp id="output">		{
 			"question" : "The question?",
 			"category" : "category",
-			"subCategory" : "sub
-category",
+			"subCategory" : "sub category",
 			"answer" : "correct answer",
 			"otherOptions" : [
 				"option 1",

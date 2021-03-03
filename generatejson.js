@@ -1,36 +1,25 @@
 var jsonCode;
 var validSubCatagories = {
 	science : [
-		"chemistry",
 		"chem",
-		"physics",
 		"phy",
-		"biology",
 		"bio"
 	],
 	ict : [
 		"software",
 		"website",
-		"web",
 		"programming",
-		"prog",
 		"security"
 	],
 	literature : [
 		"bangla",
-		"bng",
 		"english",
-		"eng",
-		"hindi",
-		"hnd"
+		"hindi"
 	],
 	grammer : [
 		"bangla",
-		"bng",
 		"english",
-		"eng",
-		"hindi",
-		"hnd"
+		"hindi"
 	],
 	history : [
 		"international",
@@ -54,8 +43,14 @@ const subCategoryInput = form["subCategory"];
 const difficultyInput = form["difficulty"];
 const answerInput = form["answer"];
 const optionInput = form["options"];
+const subcategoryDatalist = document.getElementById("subcategoryDatalist");
 const output = document.getElementById("output");
 
+
+categoryInput.addEventListener("change", () => {
+	subcategoryDatalist.innerHTML = "";
+	validSubCatagories[categoryInput.value].forEach(subcategory => subcategoryDatalist.innerHTML += `<option value="${subcategory}"></option>`);
+});
 
 function generateCode() {
 	var question = questionInput.value.trim();
@@ -81,8 +76,6 @@ function generateCode() {
 	answerInput.value = "";
 	optionInput.value = "";
 	
-	if(jsonCode != undefined) jsonCode += `,
-`;
 	if(jsonCode == undefined) jsonCode = ``;
 	
 	jsonCode += `		{
@@ -96,7 +89,7 @@ function generateCode() {
 				"${options[1]}",
 				"${options[2]}"
 			]
-		}`;
+		},`;
 	
 	output.innerHTML = jsonCode;
 	return false;

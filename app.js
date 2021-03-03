@@ -1,5 +1,10 @@
 //VARIABLES
-var currentQuestion, totalScore, currentScore, questionSet, quizNotFinished, currentAnswer, currentOptions, writingIndex, textToWrite, writingSpeed, textDisplayId, qnaData;
+var currentQuestion, totalScore, currentAnswer, currentOptions, writingIndex, textToWrite, writingSpeed, textDisplayId, fetchedData;
+var questionSet = 0;
+var currentScore = 0;
+var quizNotFinished = true;
+var currentDifficulty = "easy";
+var qnaData = new Array;
 
 //SELECTORS
 const qnaSlot = document.getElementById("qna-box");
@@ -13,14 +18,24 @@ const loader = document.getElementById("loader");
 
 
 //JSON FETCH
-
-qnaData = data;
-
+fetchedData = shuffle(data);
+setupQuestionSets();
 
 //FUNCTIONS
 function updateQuestion() {
+	setupDifficulty();
 	createQuestion();
 	displayQuestion();
+}
+
+function setupDifficulty() {
+	if(currentScore == 11) {
+		currentDifficulty = "hard";
+		setupQuestionSets();
+	}else if(currentScore == 6) {
+		currentDifficulty = "medium";
+		setupQuestionSets();
+	}
 }
 
 function createQuestion() {
@@ -38,17 +53,9 @@ function displayQuestion() {
 	questionSlot.innerHTML = currentQuestion;
 	questionNo.innerHTML = questionSet;
 	
-	var optionList = "";
+	optionSlot.innerHTML = "";
 	
-	for(var i = 0; i < 4; i++){
-		currentOption = currentOptions[i];
-		var id = currentOption.split(" ").join("-o-");
-		optionList += `<li onclick="checkOption('${id}')" id="${id}">${currentOption}</li>
-		`;
-	}
-	
-	optionSlot.innerHTML = optionList;
-	
+	currentOptions.forEach(option => {optionSlot.innerHTML += `<li onclick="checkOption('${option.split(" ").join("-o-")}')" id="${option.split(" ").join("-o-")}">${option}</li>`});
 	
 	qnaSlot.style.pointerEvents = "all";
 }
@@ -80,13 +87,16 @@ function checkOption(input) {
 	}
 }
 
+function setupQuestionSets() {
+	fetchedData.forEach(qnaSet => {
+		if(qnaSet.difficulty == currentDifficulty) qnaData.push(qnaSet);
+	});
+	qnaData = shuffle(qnaData);
+}
+
 function checkAnswer(input) {
 	if(input == currentAnswer) return true;
 	return false;
-}
-
-function randomizeArray(array) {
-	return;
 }
 
 function checkComplete() {
@@ -98,13 +108,13 @@ function quizCompleted() {
 }
 
 function shuffle(array) {
-	array.sort(() => Math.random() - 0.5);
+	return array.sort(() => Math.random() - 0.5);
 }
 
 function preLoad() {
 	setTimeout(function() {
 	loader.style = 'pointer-events: none; opacity: 0;'
-	}, 5500);
+	}, 1350);
 }
 
 function write() {
@@ -147,15 +157,11 @@ rollDice();
 setInterval(rollDice, 6000);
 
 //MAIN FLOW
-questionSet = 0;
 totalScore = qnaData.length;
-currentScore = 0;
-quizNotFinished = true;
 
 currentScoreBoard.innerHTML = currentScore;
 totalScoreBoard.innerHTML = totalScore;
 
-shuffle(qnaData);
 updateQuestion();
 
 window.addEventListener("load", preLoad());

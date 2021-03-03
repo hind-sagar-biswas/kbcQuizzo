@@ -1,4 +1,9 @@
+<p align="center">
+  <img width="200" src="images/Quizzo.png">
+</p>
+
 # kbcQuizzo
+
 A JavaScript Quiz/Trivia Application
 
 ## Questions for Quiz
@@ -13,11 +18,11 @@ The valid Categories and Subcategories currently present are:
 
 Valid Categories |Valid Subcategories
 | ---------- | ------------- |
-science | chemistry, chem, physics, phy, biology, bio
-ict | software, website, web, programming, prog, security
+science | chemistry, physics, biology
+ict | software, website, programming, security
 mathematics | general, higher
-literaure | bangla, bng, english, eng, hindi, hnd
-grammer | bangla, bng, english, eng, hindi, hnd
+literaure | bangla, english, hindi
+grammer | bangla, english, hindi
 history | international, bangladesh, india
 general knowledge | null
 
@@ -34,8 +39,7 @@ data = [
 	{
 		"question" : "A valid question?",
 		"category" : "category of the question",
-		"subCategory" : "sub
-category of the question",
+		"subCategory" : "subcategory of the question",
 		"difficulty" : "easy", // or hard or medium
 		"answer" : "correct answer",
 		"otherOptions" : [
@@ -47,8 +51,7 @@ category of the question",
 	{
 		"question" : "Another valid question?",
 		"category" : "category of the question",
-		"subCategory" : "sub
-category of the question",
+		"subCategory" : "subcategory of the question",
 		"difficulty" : "easy",
 		"answer" : "correct answer",
 		"otherOptions" : [
@@ -83,17 +86,18 @@ To add the codes, follow the steps below:
 
 1. Open the `qna.json` file in edit mode
 
-1. In the file, just after the last question set or object ended, give a comma(,)
+1. In the file, Paste The Code after the first third bracket as shown below:
    
    ```javascript
    data = [
+   //Paste the codes here
    	{
    		"question" : "A valid question?",
 			"category" : "category",
 			"subCategory" : "sub category",
 			"difficulty" : "easy",
 			"answer" : "correct answer",
-     "otherOptions" : [
+			"otherOptions" : [
    			"option 1",
    			"option 2",
    			"option 3"
@@ -101,14 +105,9 @@ To add the codes, follow the steps below:
    	},
    	{...a question set...},
    	{...a question set...},
-   	{...last a question set...} //give a comma(,) here
-   //Paste the codes here
+   	{...last a question set...}
    ]
    ```
-
-1. Then click enter
-
-1. Paste The Code There
 
 1. Now create a [Pull Request](https://github.com/hind-sagar-biswas/kbcQuizzo/pulls)
 

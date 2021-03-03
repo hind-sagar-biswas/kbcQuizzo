@@ -2,13 +2,61 @@ data = [
 		{
 			"question" : "What's called the process of producing Food in Plants?",
 			"category" : "science",
-			"subCategory" : "bio",
+			"subCategory" : "biology",
 			"difficulty" : "easy",
 			"answer" : "Photosynthesis",
 			"otherOptions" : [
 				"Phosphorylation",
 				"Pollination",
 				"Osmosis"
+			]
+		},
+		{
+			"question" : "How many phenomenons of light occurs when light is sent from one medium to another?",
+			"category" : "science",
+			"subCategory" : "physics",
+			"difficulty" : "easy",
+			"answer" : "3",
+			"otherOptions" : [
+				"2",
+				"4",
+				"5"
+			]
+		},
+		{
+			"question" : "What type of wave is light?",
+			"category" : "science",
+			"subCategory" : "physics",
+			"difficulty" : "easy",
+			"answer" : "Electromagnetic",
+			"otherOptions" : [
+				"Mechanical",
+				"Gravitational",
+				"Light is not a wave"
+			]
+		},
+		{
+			"question" : "How many types of hydrocarbon are there?",
+			"category" : "science",
+			"subCategory" : "chemistry",
+			"difficulty" : "medium",
+			"answer" : "2",
+			"otherOptions" : [
+				"3",
+				"4",
+				"5"
+			]
+		},
+		{
+			"question" : "Which one is an impossible hydrocarbon?",
+			"category" : "science",
+			"subCategory" : "chemistry",
+			"difficulty" : "medium",
+			"answer" : "Methene",
+			"otherOptions" : [
+				"Methane",
+				"Ethane",
+				"Ethene"
 			]
 		}
 	]
