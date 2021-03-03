@@ -10,5 +10,29 @@ data = [
 				"Pollination",
 				"Osmosis"
 			]
+		},
+		{
+			"question" : "How many phenomenons of light occurs when light is sent from one medium to another?",
+			"category" : "science",
+			"subCategory" : "phy",
+			"difficulty" : "easy",
+			"answer" : "3",
+			"otherOptions" : [
+				"2",
+				"4",
+				"5"
+			]
+		},
+		{
+			"question" : "What type of wave is light?",
+			"category" : "science",
+			"subCategory" : "phy",
+			"difficulty" : "easy",
+			"answer" : "Electromagnetic",
+			"otherOptions" : [
+				"Mechanical",
+				"Gravitational",
+				"Light is not a wave"
+			]
 		}
 	]

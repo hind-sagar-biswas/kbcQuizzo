@@ -15,7 +15,7 @@ const loader = document.getElementById("loader");
 //JSON FETCH
 
 qnaData = data;
-
+shuffle(qnaData);
 
 //FUNCTIONS
 function updateQuestion() {
@@ -38,17 +38,10 @@ function displayQuestion() {
 	questionSlot.innerHTML = currentQuestion;
 	questionNo.innerHTML = questionSet;
 	
-	var optionList = "";
+	optionSlot.innerHTML = "";
 	
-	for(var i = 0; i < 4; i++){
-		currentOption = currentOptions[i];
-		var id = currentOption.split(" ").join("-o-");
-		optionList += `<li onclick="checkOption('${id}')" id="${id}">${currentOption}</li>
-		`;
-	}
-	
-	optionSlot.innerHTML = optionList;
-	
+	currentOptions.forEach(option => {optionSlot.innerHTML += `<li onclick="checkOption('${option.split(" ").join("-o-")}')" id="${option.split(" ").join("-o-")}">${option}</li>
+		`});
 	
 	qnaSlot.style.pointerEvents = "all";
 }
@@ -104,7 +97,7 @@ function shuffle(array) {
 function preLoad() {
 	setTimeout(function() {
 	loader.style = 'pointer-events: none; opacity: 0;'
-	}, 5500);
+	}, 1350);
 }
 
 function write() {
@@ -155,7 +148,6 @@ quizNotFinished = true;
 currentScoreBoard.innerHTML = currentScore;
 totalScoreBoard.innerHTML = totalScore;
 
-shuffle(qnaData);
 updateQuestion();
 
 window.addEventListener("load", preLoad());
