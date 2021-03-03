@@ -13,9 +13,8 @@ const loader = document.getElementById("loader");
 
 
 //JSON FETCH
+qnaData = shuffle(data);
 
-qnaData = data;
-shuffle(qnaData);
 
 //FUNCTIONS
 function updateQuestion() {
@@ -78,10 +77,6 @@ function checkAnswer(input) {
 	return false;
 }
 
-function randomizeArray(array) {
-	return;
-}
-
 function checkComplete() {
 	if(questionSet == totalScore) return quizNotFinished = false;
 }
@@ -91,7 +86,7 @@ function quizCompleted() {
 }
 
 function shuffle(array) {
-	array.sort(() => Math.random() - 0.5);
+	return array.sort(() => Math.random() - 0.5);
 }
 
 function preLoad() {
