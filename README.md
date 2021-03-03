@@ -39,8 +39,7 @@ data = [
 	{
 		"question" : "A valid question?",
 		"category" : "category of the question",
-		"subCategory" : "sub
-category of the question",
+		"subCategory" : "subcategory of the question",
 		"difficulty" : "easy", // or hard or medium
 		"answer" : "correct answer",
 		"otherOptions" : [
@@ -52,8 +51,7 @@ category of the question",
 	{
 		"question" : "Another valid question?",
 		"category" : "category of the question",
-		"subCategory" : "sub
-category of the question",
+		"subCategory" : "subcategory of the question",
 		"difficulty" : "easy",
 		"answer" : "correct answer",
 		"otherOptions" : [
@@ -98,7 +96,7 @@ To add the codes, follow the steps below:
 			"subCategory" : "sub category",
 			"difficulty" : "easy",
 			"answer" : "correct answer",
-     "otherOptions" : [
+			"otherOptions" : [
    			"option 1",
    			"option 2",
    			"option 3"
