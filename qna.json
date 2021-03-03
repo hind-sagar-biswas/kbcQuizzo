@@ -34,5 +34,29 @@ data = [
 				"Gravitational",
 				"Light is not a wave"
 			]
+		},
+		{
+			"question" : "How many types of hydrocarbon are there?",
+			"category" : "science",
+			"subCategory" : "chemistry",
+			"difficulty" : "medium",
+			"answer" : "2",
+			"otherOptions" : [
+				"3",
+				"4",
+				"5"
+			]
+		},
+		{
+			"question" : "Which one is an impossible hydrocarbon?",
+			"category" : "science",
+			"subCategory" : "chemistry",
+			"difficulty" : "medium",
+			"answer" : "Methene",
+			"otherOptions" : [
+				"Methane",
+				"Ethane",
+				"Ethene"
+			]
 		}
 	]
