@@ -1,6 +1,7 @@
 //VARIABLES
-var currentQuestion, totalScore, currentAnswer, currentOptions, writingIndex, textToWrite, writingSpeed, textDisplayId, fetchedData;
+var currentQuestion, currentAnswer, currentOptions, writingIndex, textToWrite, writingSpeed, textDisplayId, fetchedData;
 var questionSet = 0;
+var totalScore = 15;
 var currentScore = 0;
 var quizNotFinished = true;
 var currentDifficulty = "easy";
@@ -47,6 +48,22 @@ function updateQuestion() {
 	displayQuestion();
 }
 
+function updatePrizeList() {
+	prizeList.innerHTML = "";
+	for(var p = 0; p < 15; p++){
+		var prizeNumber = 14 - p;
+		
+		if(prizeNumber == questionSet) {
+			prizeList.innerHTML += `<li class="current"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
+		}else if(prizeNumber < questionSet) {
+			prizeList.innerHTML += `<li class="passed"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
+		}else {
+			prizeList.innerHTML += `<li><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
+		}
+		prizeList.innerHTML += "<hr>";
+	}
+}
+
 function setupDifficulty() {
 	if(currentScore == 11) {
 		currentDifficulty = "hard";
@@ -79,19 +96,15 @@ function displayQuestion() {
 	qnaSlot.style.pointerEvents = "all";
 }
 
-function updatePrizeList() {
-	prizeList.innerHTML = "";
-	for(var p = 0; p < 15; p++){
-		var prizeNumber = 14 - p;
-		
-		if(prizeNumber == questionSet) {
-			prizeList.innerHTML += `<li class="current"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
-		}else if(prizeNumber < questionSet) {
-			prizeList.innerHTML += `<li class="passed"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
-		}else {
-			prizeList.innerHTML += `<li><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
-		}
-	}
+
+
+function countdownTimer() {
+	
+}
+
+function qnaOver() {
+	alert("KBC Over");
+	quizNotFinished = false;
 }
 
 function checkOption(input) {
@@ -106,19 +119,22 @@ function checkOption(input) {
 		if(isCorrect) {
 			selectedOption.classList.add("correct");
 			currentScore++;
+			currentScoreBoard.innerHTML = zfill(currentScore);
+			
+			if(quizNotFinished) {
+				setTimeout(function() {
+					nextBox.style.display =	"block";
+				}, 1500);
+			}else {
+				qnaOver();
+			}
 		}else {
 			selectedOption.classList.add("incorrect");
+			qnaOver();
+			return;
 		}
-		currentScoreBoard.innerHTML = currentScore;
 	}, 500);
-	setTimeout(checkComplete(), 1000);
-	if(quizNotFinished) {
-		setTimeout(function() {
-			nextBox.style.display =	"block";
-		}, 1500);
-	}else {
-		quizCompleted();
-	}
+	checkComplete()
 }
 
 function setupQuestionSets() {
@@ -135,10 +151,6 @@ function checkAnswer(input) {
 
 function checkComplete() {
 	if(questionSet == totalScore) return quizNotFinished = false;
-}
-
-function quizCompleted() {
-	alert("Quiz Over");
 }
 
 function shuffle(array) {
@@ -196,11 +208,6 @@ rollDice();
 setInterval(rollDice, 6000);
 
 //MAIN FLOW
-totalScore = qnaData.length;
-
-currentScoreBoard.innerHTML = currentScore;
-totalScoreBoard.innerHTML = totalScore;
-
 updateQuestion();
 
 window.addEventListener("load", preLoad());
