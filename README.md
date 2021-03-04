@@ -6,6 +6,26 @@
 
 A JavaScript Quiz/Trivia Application
 
+## Color Pallets
+
+```css
+/* Pallet One */
+--pallet-one-primary: #55acff;
+--pallet-one-secondary: #0a1640;
+--pallet-one-text: white;
+--pallet-one-success: #24f100;
+--pallet-one-danger: #f13b13;
+	
+/* Pallet Two */
+--pallet-two-primary: #79addc;
+--pallet-two-secondary: #2c363f;
+--pallet-two-text: #f1ecce;
+--pallet-two-success: #9ae19d;
+--pallet-two-danger: #ef476f;
+```
+
+Currently active scheme: **Pallet Two**
+
 ## Questions for Quiz
 
 ### Question Info
