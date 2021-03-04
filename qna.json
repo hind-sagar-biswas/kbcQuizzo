@@ -1,3 +1,29 @@
+applicationData = {
+	"mainLanguage": "JavaScript",
+	"allLanguage": [
+		"JavaScript",
+		"JSON",
+		"HTML",
+		"CSS"
+	],
+	"frameworks": null,
+	"authorData": {
+		"name": "Hind Sagar Biswas",
+		"email": "hindsbhk@gmail.com",
+		"website": "hindbiswas.000webhostapp.com",
+		"github": "https://github.com/hind-sagar-biswas/"
+	},
+	"versionData" : {
+		"stable": {
+			"name": ""notReleased"",
+			"tag": ""notReleased""
+		},
+		"preRelease": {
+			"name": "Alpha 3",
+			"tag": "v1.0.2"
+		}
+	}
+}
 data = [
 			{
 			"question" : "How many elements are there in a periodic table?",
