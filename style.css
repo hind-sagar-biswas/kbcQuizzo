@@ -33,6 +33,9 @@ body{
 	color: var(--text);
 	background: var(--secondary);
 }
+header{
+	padding: 10px;
+}
 header center h1{
 	color: var(--primary);
 }
@@ -100,7 +103,8 @@ ul#options li{
 }
 #button-box{
 	padding: 1em 0;
-	transition: all 0.3s;
+	display: flex;
+	justify-content: space-between;
 }
 #button-box button{
 	width: 48%;

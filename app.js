@@ -60,7 +60,7 @@ function updatePrizeList() {
 		}else {
 			prizeList.innerHTML += `<li><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
 		}
-		prizeList.innerHTML += `<hr style="border-top: 1px solid #101421; border-bottom: 1px solid var(--primary);">`;
+		prizeList.innerHTML += `<hr style="border: 1px solid var(--primary);">`;
 	}
 }
 
