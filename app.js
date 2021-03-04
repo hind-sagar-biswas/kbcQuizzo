@@ -5,6 +5,23 @@ var currentScore = 0;
 var quizNotFinished = true;
 var currentDifficulty = "easy";
 var qnaData = new Array;
+var prizes = [
+	"1000$",
+	"2000$",
+	"3000$",
+	"4000$",
+	"5000$",
+	"10000$",
+	"25000$",
+	"50000$",
+	"100000$",
+	"250000$",
+	"500000$",
+	"1000000$",
+	"2500000$",
+	"5000000$",
+	"10000000$",
+];
 
 //SELECTORS
 const qnaSlot = document.getElementById("qna-box");
@@ -15,6 +32,7 @@ const nextBox = document.getElementById("next-box");
 const currentScoreBoard = document.getElementById("currentScore");
 const totalScoreBoard = document.getElementById("totalScore");
 const loader = document.getElementById("loader");
+const prizeList = document.getElementById("prizes");
 
 
 //JSON FETCH
@@ -23,6 +41,7 @@ setupQuestionSets();
 
 //FUNCTIONS
 function updateQuestion() {
+	updatePrizeList();
 	setupDifficulty();
 	createQuestion();
 	displayQuestion();
@@ -58,6 +77,21 @@ function displayQuestion() {
 	currentOptions.forEach(option => {optionSlot.innerHTML += `<li onclick="checkOption('${option.split(" ").join("-o-")}')" id="${option.split(" ").join("-o-")}">${option}</li>`});
 	
 	qnaSlot.style.pointerEvents = "all";
+}
+
+function updatePrizeList() {
+	prizeList.innerHTML = "";
+	for(var p = 0; p < 15; p++){
+		var prizeNumber = 14 - p;
+		
+		if(prizeNumber == questionSet) {
+			prizeList.innerHTML += `<li class="current"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
+		}else if(prizeNumber < questionSet) {
+			prizeList.innerHTML += `<li class="passed"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
+		}else {
+			prizeList.innerHTML += `<li><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
+		}
+	}
 }
 
 function checkOption(input) {
@@ -132,6 +166,11 @@ function typeWriter(sentence, id, speed) {
 	textDisplayId = id;
 	
 	write();
+}
+
+function zfill(numberToFill) {
+		if(numberToFill < 10) return "0" + numberToFill;
+		return "" + numberToFill;
 }
 
 function rollDice() {
