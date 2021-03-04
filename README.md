@@ -55,6 +55,7 @@ Questions are stored in `qna.json` file in the `/root` directory as JSON.
 ### JSON Structure
 
 ```javascript
+applicationData = {... informations related to KBC Quizzo ...}
 data = [
 	{
 		"question" : "A valid question?",

@@ -25,6 +25,8 @@ var prizes = [
 ];
 
 //SELECTORS
+const title = document.getElementById("title");
+const versionOutput = document.getElementById("version");
 const qnaSlot = document.getElementById("qna-box");
 const questionSlot = document.getElementById("question");
 const questionNo = document.getElementById("questionNumber");
@@ -37,6 +39,7 @@ const prizeList = document.getElementById("prizes");
 
 
 //JSON FETCH
+appData = applicationData;
 fetchedData = shuffle(data);
 setupQuestionSets();
 
@@ -206,6 +209,9 @@ rollDice();
 setInterval(rollDice, 6000);
 
 //MAIN FLOW
+title.innerHTML = appData.name;
+versionOutput.innerHTML = appData.versionData.preRelease.tag;
+
 updateQuestion();
 
 window.addEventListener("load", preLoad());
