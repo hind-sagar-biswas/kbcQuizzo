@@ -2,7 +2,7 @@ data = [
 			{
 			"question" : "How many elements are there in a periodic table?",
 			"category" : "science",
-			"subCategory" : "chem",
+			"subCategory" : "chemistry",
 			"difficulty" : "easy",
 			"answer" : "118",
 			"otherOptions" : [
