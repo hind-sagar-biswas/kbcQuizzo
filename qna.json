@@ -1,4 +1,16 @@
 data = [
+			{
+			"question" : "How many elements are there in a periodic table?",
+			"category" : "science",
+			"subCategory" : "chem",
+			"difficulty" : "easy",
+			"answer" : "118",
+			"otherOptions" : [
+				"121",
+				"120",
+				"119"
+			]
+		},
 		{
 			"question" : "What's called the process of producing Food in Plants?",
 			"category" : "science",
