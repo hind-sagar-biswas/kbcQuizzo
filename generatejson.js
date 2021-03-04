@@ -1,9 +1,9 @@
 var jsonCode;
 var validSubCatagories = {
 	science : [
-		"chem",
-		"phy",
-		"bio"
+		"chemistry",
+		"physics",
+		"biology"
 	],
 	ict : [
 		"software",
