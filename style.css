@@ -1,9 +1,24 @@
 :root{
-	--primary: #55acff;
-	--background: #0a1640;
-	--text: white;
-	--success: #24f100;
-	--danger: #f13b13;
+	/* Pallet One */
+	--pallet-one-primary: #55acff;
+	--pallet-one-secondary: #0a1640;
+	--pallet-one-text: white;
+	--pallet-one-success: #24f100;
+	--pallet-one-danger: #f13b13;
+	
+	/* Pallet Two */
+	--pallet-two-primary: #79addc;
+	--pallet-two-secondary: #2c363f;
+	--pallet-two-text: #f1ecce;
+	--pallet-two-success: #9ae19d;
+	--pallet-two-danger: #ef476f;
+	
+	/* Pallet Setup */
+	--primary: var(--pallet-two-primary);
+	--secondary: var(--pallet-two-secondary);
+	--text: var(--pallet-two-text);
+	--success: var(--pallet-two-success);
+	--danger: var(--pallet-two-danger);
 }
 *{
 	margin: 0;
@@ -16,7 +31,13 @@ body{
 	font-family: sans-serif;
 	font-size: 15px;
 	color: var(--text);
-	background: var(--background);
+	background: var(--secondary);
+}
+header center h1{
+	color: var(--primary);
+}
+button{
+	outline: none !important;
 }
 ul li{list-style-type: none;}
 ul#options li{
@@ -37,6 +58,7 @@ ul#options li{
 }
 #prizes li{
 	display: flex;
+	border-radius: 0;
 }
 #prizes li #prizeNumber,
 #title{
@@ -60,7 +82,7 @@ ul#options li{
 }
 .current{
 	background: var(--primary);
-	color: var(--background);
+	color: var(--secondary);
 	padding: 3px;
 	border-radius: 5px;
 }
@@ -70,23 +92,32 @@ ul#options li{
 .correct{
 	background: var(--success);
 	border: 3px solid var(--success) !important;
+	color: var(--secondary);
 }
 .incorrect{
 	background: var(--danger);
 	border: 3px solid var(--danger) !important;
 }
-#next-box{
+#button-box{
 	padding: 1em 0;
-	display: none;
 	transition: all 0.3s;
 }
-#next-box button{
-	width: 100%;
+#button-box button{
+	width: 48%;
 	height: 50px;
-	background: var(--primary);
-	color: var(--background);
-	border: none;
 	border-radius: 5px;
+	transition: all 0.3s;
+}
+#next-button{
+	pointer-events: none;
+	background: #759c82;
+	border: 2px solid var(--success);
+	color: var(--secondary);
+}
+#quit-button{
+	background: var(--danger);
+	color: var(--text);
+	border: 2px solid var(--danger);
 }
 .disabled{
 	opacity:0.5;
@@ -94,7 +125,7 @@ ul#options li{
 }
 #start-box{
 	background: var(--primary);
-	color: var(--background);
+	color: var(--secondary);
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -113,17 +144,19 @@ ul#options li{
 #start-box center button{
 	height: 50px;
 	width: 150px;
-	background: var(--background);
+	background: var(--secondary);
 	color: var(--text);
 	border: none;
 	border-radius: 5px;
 }
 #loader{
 	position: fixed;
+	top: 0;
+	bottom: 0;
 	width: 100vw;
 	height: 100vh;
 	background: var(--primary);
-	z-index: 1;
+	z-index: 50;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -151,7 +184,7 @@ ul#options li{
 	display: inline-block;
 	padding: 0.5em;
 	border-radius: 5px;
-	background: var(--background);
+	background: var(--secondary);
 	color: var(--primary);
 	text-align: center;
 }

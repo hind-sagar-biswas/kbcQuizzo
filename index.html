@@ -9,7 +9,7 @@
 	<meta name="HandheldFriendly" content="true"/> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	<title>KBC Quizzo Alpha</title>
+	<title>KBC Quizzo Alpha v-1.0.2</title>
 	
 	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
@@ -20,6 +20,12 @@
 	<script type="text/javascript" src="app.js" defer></script>
 </head>
 <body>
+	<header>
+		<center>
+			<h1>Who'll Be A Millionaire?</h1>
+			<!-- <img src="images/Quizzo.png" alt="KBC Quizzo"> -->
+		</center>
+	</header>
 	<section id="loader">
 		<h1 style="font-size:3rem"><i class="fas" id="dice"></i></h1>
 		<h1><span id="welcome"></span></h1>
@@ -42,8 +48,9 @@
 			</div>
 		</div>
 		
-		<div id="next-box">
-			<button onclick="updateQuestion()">Next</button>
+		<div id="button-box">
+			<button id="next-button" onclick="updateQuestion()">Next</button>
+			<button id="quit-button" onclick="qnaOver()">Quit</button>
 		</div>
 	</div>
 	<div id="prizeListBox">
