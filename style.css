@@ -1,6 +1,5 @@
 :root{
-	--primary: ;
-	--secondary: #55acff;
+	--primary: #55acff;
 	--background: #0a1640;
 	--text: white;
 	--success: #24f100;
@@ -19,33 +18,54 @@ body{
 	color: var(--text);
 	background: var(--background);
 }
+ul li{list-style-type: none;}
 ul#options li{
-	list-style-type: none;
 	padding: 0.5em 1em;
 	margin: 0.5em 1em;
 	border-radius: 5px;
-	border: 2px solid var(--secondary);
+	border: 2px solid var(--primary);
 	transition: all 0.3s;
 }
-#question-box{
+#question-box,
+#prizeListBox{
 	max-width: 450px;
 	position: relative;
 	padding: 10px;
 }
-#qna-box{
+#prizes{
+	padding: 10px;
+}
+#prizes li{
+	display: flex;
+}
+#prizes li #prizeNumber,
+#title{
+	flex-grow: 1;
+}
+#qna-box,
+#prizeList{
 	width: 100%;
-	border: 3px solid var(--secondary);
+	border: 3px solid var(--primary);
 	border-radius: 5px;
 }
 #questionHolder{
-	color: var(--secondary);
+	color: var(--primary);
 	margin: 0.5em 1em;
 }
 #options{
 	display: grid;
 	grid-template-columns: 50% 50%;
-  justify-content: space-between;
-  align-content: space-between;
+	justify-content: space-between;
+	align-content: space-between;
+}
+.current{
+	background: var(--primary);
+	color: var(--background);
+	padding: 3px;
+	border-radius: 5px;
+}
+.passed{	
+	color: var(--success);
 }
 .correct{
 	background: var(--success);
@@ -63,7 +83,7 @@ ul#options li{
 #next-box button{
 	width: 100%;
 	height: 50px;
-	background: var(--secondary);
+	background: var(--primary);
 	color: var(--background);
 	border: none;
 	border-radius: 5px;
@@ -73,7 +93,7 @@ ul#options li{
 	pointer-events: none;
 }
 #start-box{
-	background: var(--secondary);
+	background: var(--primary);
 	color: var(--background);
 	position: absolute;
 	top: 0;
@@ -102,7 +122,7 @@ ul#options li{
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background: var(--secondary);
+	background: var(--primary);
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
@@ -121,7 +141,7 @@ ul#options li{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: var(--secondary);
+	background: var(--primary);
 	color: var(--text);
 	border-radius: 5px;
 	margin: 0 0 10px 0;
@@ -132,7 +152,7 @@ ul#options li{
 	padding: 0.5em;
 	border-radius: 5px;
 	background: var(--background);
-	color: var(--secondary);
+	color: var(--primary);
 	text-align: center;
 }
 
@@ -143,6 +163,16 @@ ul#options li{
 	0%{transform: rotate(0deg);}
 	90%{transform: rotate(0deg);}
 	100%{transform: rotate(180deg);}
+}
+
+@media(min-width: 768px){
+	#main-container{
+		display: flex;
+		justify-content: center;
+	}
+	#prizeListBox{
+		flex-grow: 1;
+	}
 }
 
 @media(max-width: 768px){
