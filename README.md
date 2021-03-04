@@ -34,7 +34,7 @@ Questions are stored in `qna.json` file in the `/root` directory as JSON.
 
 ### JSON Structure
 
-```json
+```javascript
 data = [
 	{
 		"question" : "A valid question?",
