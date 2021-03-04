@@ -29,7 +29,7 @@ const qnaSlot = document.getElementById("qna-box");
 const questionSlot = document.getElementById("question");
 const questionNo = document.getElementById("questionNumber");
 const optionSlot = document.getElementById("options");
-const nextBox = document.getElementById("next-box");
+const nextButton = document.getElementById("next-button");
 const currentScoreBoard = document.getElementById("currentScore");
 const totalScoreBoard = document.getElementById("totalScore");
 const loader = document.getElementById("loader");
@@ -60,7 +60,7 @@ function updatePrizeList() {
 		}else {
 			prizeList.innerHTML += `<li><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
 		}
-		prizeList.innerHTML += "<hr>";
+		prizeList.innerHTML += `<hr style="border-top: 1px solid #101421; border-bottom: 1px solid var(--primary);">`;
 	}
 }
 
@@ -85,7 +85,7 @@ function createQuestion() {
 }
 
 function displayQuestion() {
-	nextBox.style.display =		"none";
+	nextButton.style =	"background: #759c82; pointer-events: none;";
 	questionSlot.innerHTML = currentQuestion;
 	questionNo.innerHTML = questionSet;
 	
@@ -122,9 +122,7 @@ function checkOption(input) {
 			currentScoreBoard.innerHTML = zfill(currentScore);
 			
 			if(quizNotFinished) {
-				setTimeout(function() {
-					nextBox.style.display =	"block";
-				}, 1500);
+				nextButton.style =	"background: var(--success); pointer-events: all;";
 			}else {
 				qnaOver();
 			}
