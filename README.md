@@ -42,9 +42,10 @@ science | chemistry, physics, biology
 ict | software, website, programming, security
 mathematics | general, higher
 literaure | bangla, english, hindi
+mythsAndLegends | ancientMyths, romanMythology, indianMythology, greekMythology, urbanLegends
 grammer | bangla, english, hindi
 history | international, bangladesh, india
-general knowledge | null
+general knowledge | geography, generalScienve
 
 _**Note:** These are just current validated categories and sub categories. If you want or suggest any new category or subcategory then please create an [Issue](https://github.com/hind-sagar-biswas/kbcQuizzo/issues)_
 

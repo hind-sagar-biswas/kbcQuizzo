@@ -229,7 +229,7 @@ setInterval(rollDice, 6000);
 title.innerHTML = appData.name;
 versionOutput.innerHTML = appData.versionData.preRelease.tag;
 infoBody.innerHTML = `
-<h1>${appData.name}</h1>
+<img src="images/Quizzo.png" alt="KBC Quizzo" width="150px">
 <hr>
 <p>This is 
 	<span class="info">${appData.name} </span> 
@@ -246,7 +246,7 @@ infoBody.innerHTML = `
 	which is a 
 	<span class="info">${appData.license.type} </span>
 	license. That means you can have the source code for free with a few conditions. You can even contribute to the project on 
-	<a href="${appData.repository}"><span class="info"> Github</span></a>.
+	<a href="${appData.repository}"><span class="info"> <i class="fab fa-github"></i> Github</span></a>.
 </p>
 `;
 

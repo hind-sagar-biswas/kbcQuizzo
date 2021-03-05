@@ -3,7 +3,8 @@ var validSubCatagories = {
 	science : [
 		"chemistry",
 		"physics",
-		"biology"
+		"biology",
+		"astronomy"
 	],
 	ict : [
 		"software",
@@ -14,7 +15,14 @@ var validSubCatagories = {
 	literature : [
 		"bangla",
 		"english",
-		"hindi"
+		"hindi",
+	],
+	mythsAndLegends : [
+		"ancientMyths",
+		"urbanLegends",
+		"greekMythology",
+		"indianMythology",
+		"romanMythology",
 	],
 	grammer : [
 		"bangla",
@@ -31,8 +39,8 @@ var validSubCatagories = {
 		"higher"
 	],
 	generalKnowledge : [
-		"null",
-		""
+		"geography",
+		"generalScience"
 	]
 }
 
