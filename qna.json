@@ -21,8 +21,8 @@ applicationData = {
 			"tag": "notReleased"
 		},
 		"preRelease": {
-			"name": "Alpha 3",
-			"tag": "v1.0.2"
+			"name": "Alpha 4",
+			"tag": "v1.0.3"
 		}
 	},
 	"license": {
