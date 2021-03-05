@@ -38,7 +38,7 @@ The valid Categories and Subcategories currently present are:
 
 Valid Categories |Valid Subcategories
 | ---------- | ------------- |
-science | chemistry, physics, biology
+science | chemistry, physics, biology, astronomy
 ict | software, website, programming, security
 mathematics | general, higher
 literaure | bangla, english, hindi
