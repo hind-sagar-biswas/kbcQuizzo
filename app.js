@@ -85,10 +85,10 @@ function updatePrizeList() {
 }
 
 function setupDifficulty() {
-	if(currentScore == 11) {
+	if(currentScore == 10) {
 		currentDifficulty = "hard";
 		setupQuestionSets();
-	}else if(currentScore == 6) {
+	}else if(currentScore == 5) {
 		currentDifficulty = "medium";
 		setupQuestionSets();
 	}
@@ -107,7 +107,7 @@ function createQuestion() {
 function displayQuestion() {
 	nextButton.style =	"background: #759c82; pointer-events: none;";
 	questionSlot.innerHTML = currentQuestion;
-	questionNo.innerHTML = questionSet;
+	questionNo.innerHTML = currentScore + 1;
 	
 	optionSlot.innerHTML = "";
 	
@@ -156,6 +156,8 @@ function checkOption(input) {
 }
 
 function setupQuestionSets() {
+	qnaData = new Array;
+	questionSet = 0;
 	fetchedData.forEach(qnaSet => {
 		if(qnaSet.difficulty == currentDifficulty) qnaData.push(qnaSet);
 	});
@@ -168,7 +170,7 @@ function checkAnswer(input) {
 }
 
 function checkComplete() {
-	if(questionSet == totalScore) return quizNotFinished = false;
+	if(currentScore == totalScore) return quizNotFinished = false;
 }
 
 function shuffle(array) {
