@@ -25,6 +25,8 @@ var prizes = [
 ];
 
 //SELECTORS
+const title = document.getElementById("title");
+const versionOutput = document.getElementById("version");
 const qnaSlot = document.getElementById("qna-box");
 const questionSlot = document.getElementById("question");
 const questionNo = document.getElementById("questionNumber");
@@ -34,9 +36,27 @@ const currentScoreBoard = document.getElementById("currentScore");
 const totalScoreBoard = document.getElementById("totalScore");
 const loader = document.getElementById("loader");
 const prizeList = document.getElementById("prizes");
+var infoBox = document.getElementById("applicationInfo");
+const infoBody = document.getElementById("infoBody");
+const infoTrigger = document.getElementById("checkInfo");
+const infoBoxClose = document.getElementsByClassName("close")[0];
 
+
+//EVENTS
+infoTrigger.onclick = function() {
+  infoBox.style.display = "block";
+}
+infoBoxClose.onclick = function() {
+  infoBox.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == infoBox) {
+    infoBox.style.display = "none";
+  }
+}
 
 //JSON FETCH
+appData = applicationData;
 fetchedData = shuffle(data);
 setupQuestionSets();
 
@@ -206,6 +226,30 @@ rollDice();
 setInterval(rollDice, 6000);
 
 //MAIN FLOW
+title.innerHTML = appData.name;
+versionOutput.innerHTML = appData.versionData.preRelease.tag;
+infoBody.innerHTML = `
+<img src="images/Quizzo.png" alt="KBC Quizzo" width="150px">
+<hr>
+<p>This is 
+	<span class="info">${appData.name} </span> 
+	<span class="info">${appData.versionData.preRelease.tag} </span>
+	(<span class="info">${appData.versionData.preRelease.name} </span>). 
+	It's stable version is 
+	<span class="info">${appData.versionData.stable.name} </span>.
+	It's a  
+	<span class="info">${appData.mainLanguage} </span> 
+	Based Application, developed by: 
+	<span class="info">${appData.authorData.name} </span>
+	It's licensed under 
+	<span class="info">${appData.license.name} </span> 
+	which is a 
+	<span class="info">${appData.license.type} </span>
+	license. That means you can have the source code for free with a few conditions. You can even contribute to the project on 
+	<a href="${appData.repository}"><span class="info"> <i class="fab fa-github"></i> Github</span></a>.
+</p>
+`;
+
 updateQuestion();
 
 window.addEventListener("load", preLoad());

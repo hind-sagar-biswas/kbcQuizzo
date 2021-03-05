@@ -1,5 +1,83 @@
+applicationData = {
+	"name": "KBC Quizzo",
+	"repository": "https://hind-sagar-biswas/kbcQuizzo/",
+	"mainLanguage": "JavaScript",
+	"allLanguage": [
+		"JavaScript",
+		"JSON",
+		"HTML",
+		"CSS"
+	],
+	"frameworks": null,
+	"authorData": {
+		"name": "Hind Sagar Biswas",
+		"email": "hindsbhk@gmail.com",
+		"website": "hindbiswas.000webhostapp.com",
+		"github": "https://github.com/hind-sagar-biswas/"
+	},
+	"versionData" : {
+		"stable": {
+			"name": "notReleased",
+			"tag": "notReleased"
+		},
+		"preRelease": {
+			"name": "Alpha 4",
+			"tag": "v1.0.3"
+		}
+	},
+	"license": {
+		"name": "GNU AGPLv3",
+		"type": "strong copyleft"
+	}
+}
 data = [
-			{
+		{
+			"question" : "What is the largest country in the world?",
+			"category" : "generalKnowledge",
+			"subCategory" : "geography",
+			"difficulty" : "easy",
+			"answer" : "Russia",
+			"otherOptions" : [
+				"India",
+				"USA",
+				"Canada"
+			]
+		},		{
+			"question" : "A doctor with a PhD is a doctor of what?",
+			"category" : "generalKnowledge",
+			"subCategory" : "generalScience",
+			"difficulty" : "medium",
+			"answer" : "Philosophy",
+			"otherOptions" : [
+				"Psychology",
+				"Phrenology",
+				"Physical Therapy"
+			]
+		},		{
+			"question" : "Which ocean borders the west coast of the United States?",
+			"category" : "generalKnowledge",
+			"subCategory" : "geography",
+			"difficulty" : "medium",
+			"answer" : "Pacific",
+			"otherOptions" : [
+				"Indian",
+				"Arctic",
+				"Atlantic"
+			]
+		},
+		{
+			"question" : "According to legend, what item is most effective against werewolves?",
+			"category" : "mythsAndLegends",
+			"subCategory" : "urbanLegends",
+			"difficulty" : "easy",
+			"answer" : "Silver",
+			"otherOptions" : [
+				"Gold",
+				"Copper",
+				"Lead"
+			]
+		},
+		{
 			"question" : "How many elements are there in a periodic table?",
 			"category" : "science",
 			"subCategory" : "chemistry",

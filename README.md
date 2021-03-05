@@ -38,13 +38,14 @@ The valid Categories and Subcategories currently present are:
 
 Valid Categories |Valid Subcategories
 | ---------- | ------------- |
-science | chemistry, physics, biology
+science | chemistry, physics, biology, astronomy
 ict | software, website, programming, security
 mathematics | general, higher
 literaure | bangla, english, hindi
+mythsAndLegends | ancientMyths, romanMythology, indianMythology, greekMythology, urbanLegends
 grammer | bangla, english, hindi
 history | international, bangladesh, india
-general knowledge | null
+general knowledge | geography, generalScienve
 
 _**Note:** These are just current validated categories and sub categories. If you want or suggest any new category or subcategory then please create an [Issue](https://github.com/hind-sagar-biswas/kbcQuizzo/issues)_
 
@@ -55,6 +56,7 @@ Questions are stored in `qna.json` file in the `/root` directory as JSON.
 ### JSON Structure
 
 ```javascript
+applicationData = {... informations related to KBC Quizzo ...}
 data = [
 	{
 		"question" : "A valid question?",
