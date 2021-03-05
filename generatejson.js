@@ -15,7 +15,7 @@ var validSubCatagories = {
 	literature : [
 		"bangla",
 		"english",
-		"hindi",
+		"hindi"
 	],
 	mythsAndLegends : [
 		"ancientMyths",
