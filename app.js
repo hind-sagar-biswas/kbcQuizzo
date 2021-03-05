@@ -234,9 +234,19 @@ infoBody.innerHTML = `
 <p>This is 
 	<span class="info">${appData.name} </span> 
 	<span class="info">${appData.versionData.preRelease.tag} </span>
-	(<span class="info">${appData.versionData.preRelease.name} </span>). It's stable version is 
-	<span class="info">${appData.versionData.stable.name} </span>. Developed by: 
+	(<span class="info">${appData.versionData.preRelease.name} </span>). 
+	It's stable version is 
+	<span class="info">${appData.versionData.stable.name} </span>.
+	It's a  
+	<span class="info">${appData.mainLanguage} </span> 
+	Based Application, developed by: 
 	<span class="info">${appData.authorData.name} </span>
+	It's licensed under 
+	<span class="info">${appData.license.name} </span> 
+	which is a 
+	<span class="info">${appData.license.type} </span>
+	license. That means you can have the source code for free with a few conditions. You can even contribute to the project on 
+	<a href="${appData.repository}"><span class="info"> Github</span></a>.
 </p>
 `;
 
