@@ -19,16 +19,16 @@
 </head>
 <body>
 	<header>
-		<h1>JSON code generator for <a href="https://github.com/hind-sagar-biswas/kbcQuizzo" style="color:#121625;">KBC Quizzo</a></h1>
-		<ul>HELP?
+		<h2><i class="fab fa-github"></i> JSON code generator for <a href="https://github.com/hind-sagar-biswas/kbcQuizzo" style="color: #a1a1a1;">KBC Quizzo</a></h2>
+	</header>
+ <section>
+ 			<ul id="help">
+			<strong>NEED HELP?</strong>
 			<a href="https://github.com/hind-sagar-biswas/kbcQuizzo#json-code-generator"><li><i class="fas
 fa-info-circle"></i> How to add the JSON Code?</li></a>
 			<a href="https://github.com/hind-sagar-biswas/kbcQuizzo#valid-categories-and-subcategories"><li><i class="fas
 fa-info-circle"></i> What are the valid Sub Categories?</li></a>
 		</ul>
- 		<hr>
-	</header>
- <section>
 	<form id="generator" name="generator" onsubmit="return generateCode()">
 		<h2>Generator</h2>
 		<div class="inputContainer">
@@ -85,7 +85,7 @@ fa-info-circle"></i> What are the valid Sub Categories?</li></a>
 	</form>
 	<br>
 	<div id="outputContainer">
-		<h2>JSON Code</h2>
+		<h2>JSON Code <button class="popup" onclick="copyToClipboard('outputTextarea')"><i class="far fa-clone"></i> Copy to clipboard<span class="popuptext" id="copiedMessage">Code copied successfully</span></button></h2>
 		<xmp id="output">		{
 			"question" : "The question?",
 			"category" : "category",
@@ -99,5 +99,6 @@ fa-info-circle"></i> What are the valid Sub Categories?</li></a>
 		}</xmp>
 	</div>
  </section>
+ <textarea id="outputTextarea" readonly></textarea>
 </body>
 </html>
