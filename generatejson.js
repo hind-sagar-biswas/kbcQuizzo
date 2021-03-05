@@ -53,6 +53,7 @@ const answerInput = form["answer"];
 const optionInput = form["options"];
 const subcategoryDatalist = document.getElementById("subcategoryDatalist");
 const output = document.getElementById("output");
+const outputTextarea = document.getElementById("outputTextarea");
 
 
 categoryInput.addEventListener("change", () => {
@@ -100,5 +101,25 @@ function generateCode() {
 		},`;
 	
 	output.innerHTML = jsonCode;
+	outputTextarea.innerHTML = jsonCode;
 	return false;
+}
+
+function copyToClipboard(targetId) {
+  /* Get the text field */
+  var copyText = document.getElementById(targetId);
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  popup("copiedMessage");
+}
+
+function popup(targetId) {
+  var popup = document.getElementById(targetId);
+  popup.classList.toggle("show");
 }
