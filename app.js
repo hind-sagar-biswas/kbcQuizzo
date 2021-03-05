@@ -36,7 +36,24 @@ const currentScoreBoard = document.getElementById("currentScore");
 const totalScoreBoard = document.getElementById("totalScore");
 const loader = document.getElementById("loader");
 const prizeList = document.getElementById("prizes");
+var infoBox = document.getElementById("applicationInfo");
+const infoBody = document.getElementById("infoBody");
+const infoTrigger = document.getElementById("checkInfo");
+const infoBoxClose = document.getElementsByClassName("close")[0];
 
+
+//EVENTS
+infoTrigger.onclick = function() {
+  infoBox.style.display = "block";
+}
+infoBoxClose.onclick = function() {
+  infoBox.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == infoBox) {
+    infoBox.style.display = "none";
+  }
+}
 
 //JSON FETCH
 appData = applicationData;
@@ -211,6 +228,17 @@ setInterval(rollDice, 6000);
 //MAIN FLOW
 title.innerHTML = appData.name;
 versionOutput.innerHTML = appData.versionData.preRelease.tag;
+infoBody.innerHTML = `
+<h1>${appData.name}</h1>
+<hr>
+<p>This is 
+	<span class="info">${appData.name} </span> 
+	<span class="info">${appData.versionData.preRelease.tag} </span>
+	(<span class="info">${appData.versionData.preRelease.name} </span>). It's stable version is 
+	<span class="info">${appData.versionData.stable.name} </span>. Developed by: 
+	<span class="info">${appData.authorData.name} </span>
+</p>
+`;
 
 updateQuestion();
 
