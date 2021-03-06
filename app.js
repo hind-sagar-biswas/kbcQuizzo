@@ -50,10 +50,12 @@ const questionSlot = document.getElementById("question");
 const questionNo = document.getElementById("questionNumber");
 const optionSlot = document.getElementById("options");
 const nextButton = document.getElementById("next-button");
+const scoreBoardTitle = document.getElementById("currentScore");
 const currentScoreBoard = document.getElementById("currentScore");
 const totalScoreBoard = document.getElementById("totalScore");
 const loader = document.getElementById("loader");
 const prizeList = document.getElementById("prizes");
+const prizeDotHolder = document.getElementById("prizeDotHolder");
 const infoBox = document.getElementById("applicationInfo");
 const infoBody = document.getElementById("infoBody");
 const infoTrigger = document.getElementById("checkInfo");
@@ -91,8 +93,17 @@ function updateQuestion() {
 
 function updatePrizeList() {
 	prizeList.innerHTML = "";
+	prizeDotHolder.innerHTML = "";
 	for(var p = 0; p < 15; p++){
 		var prizeNumber = 14 - p;
+		
+		if(p == questionSet) {
+			prizeDotHolder.innerHTML += `<div id="current" class="popup"><span class="popuptext" id="prizeMessage">${prizes[p]}</span></div>`;
+		}else if(p < questionSet) {
+			prizeDotHolder.innerHTML += `<div class="passed"></div>`;
+		}else {
+			prizeDotHolder.innerHTML += `<div></div>`;
+		}
 		
 		if(prizeNumber == questionSet) {
 			prizeList.innerHTML += `<li class="current"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
@@ -255,6 +266,9 @@ rollDice();
 setInterval(rollDice, 6000);
 
 //MAIN FLOW
+scoreBoardTitle.innerHTML = "SCORE";
+currentScoreBoard.innerHTML = "00";
+currentScoreBoard.innerHTML = "15";
 title.innerHTML = appData.name;
 versionOutput.innerHTML = appData.versionData.preRelease.tag;
 infoBody.innerHTML = `
