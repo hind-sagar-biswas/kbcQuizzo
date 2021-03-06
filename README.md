@@ -35,6 +35,26 @@ A JavaScript Quiz/Trivia Application
 
 Currently active scheme: **Pallet Two**
 
+## Clone Repo
+
+#### HTTPS
+
+```
+https://github.com/hind-sagar-biswas/kbcQuizzo.git
+```
+
+#### SSH
+
+```
+git@github.com:hind-sagar-biswas/kbcQuizzo.git
+```
+
+#### Git CLI
+
+```
+gh repo clone hind-sagar-biswas/kbcQuizzo
+```
+
 ## Questions for Quiz
 
 ### Question Info
