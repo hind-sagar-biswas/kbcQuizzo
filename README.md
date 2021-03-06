@@ -6,14 +6,30 @@
 
 ![Project Language](https://img.shields.io/static/v1?label=language&message=javascript&color=yellow)
 ![Project Type](https://img.shields.io/static/v1?label=type&message=application&color=blue)
-![Current Version](https://img.shields.io/static/v1?label=current-version&message=v1.0.4&color=lightgrey)
+![Current Version](https://img.shields.io/static/v1?label=current-version&message=v1.0.5&color=lightgrey)
 ![Stable Version](https://img.shields.io/static/v1?label=stable-version&message=not-released&color=red)
 ![Maintained](https://img.shields.io/static/v1?label=maintained&message=yes&color=green)
 ![Ask Me Anything](https://img.shields.io/static/v1?label=ask-me&message=anything&color=green)
 [![Website Up](https://img.shields.io/static/v1?label=website&message=up&color=orange)](https://hind-sagar-biswas.github.io/kbcQuizzo)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-A Vanilla JavaScript Trivia Application.
+A Vanilla JavaScript Quiz/Trivia Application
+
+## Languages and Frameworks
+
+1. Languages
+   
+   * Vanilla JavaScript
+    
+   * JSON
+   
+   * HTML5
+   
+   * CSS3
+   
+1. Frameworks
+   
+   * _**No Frameworks are used**_
 
 ## Clone Repo
 
@@ -54,7 +70,8 @@ literaure | bangla, english, hindi
 mythsAndLegends | ancientMyths, romanMythology, indianMythology, greekMythology, urbanLegends
 grammer | bangla, english, hindi
 history | international, bangladesh, india
-general knowledge | geography, generalScienve
+general knowledge | geography, generalScience, currentAffairs
+entertainment | movies, music, animations, tvShows, gaming, sports, webSeries
 
 _**Note:** These are just current validated categories and sub categories. If you want or suggest any new category or subcategory then please create an [Issue](https://github.com/hind-sagar-biswas/kbcQuizzo/issues)_
 
