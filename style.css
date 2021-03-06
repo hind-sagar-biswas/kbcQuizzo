@@ -32,6 +32,10 @@ body{
 	font-size: 15px;
 	color: var(--text);
 	background: var(--secondary);
+	background: url(images/backgroundSM.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 header{
 	padding: 10px;
@@ -245,6 +249,12 @@ ul#options li{
 }
 
 @media(min-width: 768px){
+	body{
+		background: url(images/backgroundMD.jpeg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
 	#main-container{
 		display: flex;
 		justify-content: center;
@@ -257,5 +267,5 @@ ul#options li{
 @media(max-width: 768px){
 	#options{
 	grid-template-columns: 100%;
-}
+	}
 }
