@@ -54,6 +54,9 @@ var validSubCatagories = {
 	]
 }
 
+const popUp = new Audio();
+popUp.src = 'audio/popup.wav';
+
 const form = document.forms["generator"];
 const questionInput = form["question"];
 const categoryInput = form["category"];
@@ -117,6 +120,7 @@ function generateCode() {
 }
 
 function copyToClipboard(targetId) {
+  popUp.play();
   /* Get the text field */
   var copyText = document.getElementById(targetId);
   /* Select the text field */
@@ -138,3 +142,15 @@ function popup(targetId) {
 for(validCategory in validSubCatagories){
 	categoryOptions.innerHTML += `<option value="${validCategory}">${validCategory}</option>`;
 }
+
+output.innerHTML = `		{
+			"question" : "The question?",
+			"category" : "category",
+			"subCategory" : "sub category",
+			"answer" : "correct answer",
+			"otherOptions" : [
+				"option 1",
+				"option 2",
+				"option 3"
+			]
+		}`;

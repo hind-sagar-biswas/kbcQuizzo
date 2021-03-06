@@ -21,8 +21,8 @@ applicationData = {
 			"tag": "notReleased"
 		},
 		"preRelease": {
-			"name": "Alpha 5",
-			"tag": "v1.0.4"
+			"name": "Beta 2",
+			"tag": "v1.0.6"
 		}
 	},
 	"license": {
@@ -31,6 +31,40 @@ applicationData = {
 	}
 }
 data = [
+		{
+			"question" : "What is the highest-grossing film of all time without taking inflation into account?",
+			"category" : "entertainment",
+			"subCategory" : "movies",
+			"difficulty" : "easy",
+			"answer" : "Avengers: Endgame",
+			"otherOptions" : [
+				"Titanic",
+				"Avatar",
+				"Star Wars: The Force Awakens"
+			]
+		},		{
+			"question" : "What was the first feature-length animated film ever released?",
+			"category" : "entertainment",
+			"subCategory" : "animations",
+			"difficulty" : "easy",
+			"answer" : "Snow White and the Seven Dwarfs",
+			"otherOptions" : [
+				"Pinocchio",
+				"Fantasia",
+				"Dumbo"
+			]
+		},		{
+			"question" : "What team has the longest winning streak in NBA history?",
+			"category" : "entertainment",
+			"subCategory" : "sports",
+			"difficulty" : "hard",
+			"answer" : "Los Angeles Lakers",
+			"otherOptions" : [
+				"Chicago Bulls",
+				"Golden State Warriors",
+				"Phoenix Suns"
+			]
+		},
 		{
 			"question" : "What is the largest country in the world?",
 			"category" : "generalKnowledge",
