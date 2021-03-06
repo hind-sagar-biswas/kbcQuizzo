@@ -6,8 +6,8 @@
 
 ![Project Language](https://img.shields.io/static/v1?label=language&message=javascript&color=yellow)
 ![Project Type](https://img.shields.io/static/v1?label=type&message=application&color=blue)
-![Current Version](https://img.shields.io/static/v1?label=latest-version&message=v1.0.4&color=lightgrey)
-![Stable Version](https://img.shields.io/static/v1?label=latest-version&message=not-released&color=red)
+![Current Version](https://img.shields.io/static/v1?label=current-version&message=v1.0.4&color=lightgrey)
+![Stable Version](https://img.shields.io/static/v1?label=stable-version&message=not-released&color=red)
 ![Maintained](https://img.shields.io/static/v1?label=maintained&message=yes&color=green)
 ![Ask Me Anything](https://img.shields.io/static/v1?label=ask-me&message=anything&color=green)
 [![Website Up](https://img.shields.io/static/v1?label=website&message=up&color=orange)](https://hind-sagar-biswas.github.io/kbcQuizzo)
