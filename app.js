@@ -268,7 +268,7 @@ setInterval(rollDice, 6000);
 //MAIN FLOW
 scoreBoardTitle.innerHTML = "SCORE";
 currentScoreBoard.innerHTML = "00";
-currentScoreBoard.innerHTML = "15";
+totalScoreBoard.innerHTML = "15";
 title.innerHTML = appData.name;
 versionOutput.innerHTML = appData.versionData.preRelease.tag;
 infoBody.innerHTML = `
