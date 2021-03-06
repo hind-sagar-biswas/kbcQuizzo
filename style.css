@@ -1,24 +1,9 @@
 :root{
-	/* Pallet One */
-	--pallet-one-primary: #55acff;
-	--pallet-one-secondary: #0a1640;
-	--pallet-one-text: white;
-	--pallet-one-success: #24f100;
-	--pallet-one-danger: #f13b13;
-	
-	/* Pallet Two */
-	--pallet-two-primary: #79addc;
-	--pallet-two-secondary: #2c363f;
-	--pallet-two-text: #f1ecce;
-	--pallet-two-success: #9ae19d;
-	--pallet-two-danger: #ef476f;
-	
-	/* Pallet Setup */
-	--primary: var(--pallet-two-primary);
-	--secondary: var(--pallet-two-secondary);
-	--text: var(--pallet-two-text);
-	--success: var(--pallet-two-success);
-	--danger: var(--pallet-two-danger);
+	--pallet-primary: #79addc;
+	--pallet-secondary: #2c363f;
+	--pallet-text: #f1ecce;
+	--pallet-success: #9ae19d;
+	--pallet-danger: #ef476f;
 }
 *{
 	margin: 0;
@@ -59,9 +44,11 @@ ul#options li{
 	transition: all 0.3s;
 }
 #prizeDotHolder{
-	none
+	display: none;
 }
-#qna-box-holder{position:relative;}
+#qna-box-holder{
+	position:relative;
+}
 #question-box,
 #prizeListBox{
 	max-width: 450px;
