@@ -4,9 +4,9 @@
 
 1. Firstly read the `README.md` properly.
 
-1. Then make sure that you have read the [code of conduct](https://github.com/hind-sagar-biswas/ticTacToe/blob/main/CODE_OF_CONDUCT.md).
+1. Then make sure that you have read the [code of conduct](https://github.com/hind-sagar-biswas/kbcQuizzo/blob/main/CODE_OF_CONDUCT.md).
 
-1. Check [issues](https://github.com/hind-sagar-biswas/ticTacToe/issues) to see if an issue exists already for the change you want to make.
+1. Check [issues](https://github.com/hind-sagar-biswas/kbcQuizzo/issues) to see if an issue exists already for the change you want to make.
 
 ## Don't see your issue? Open one
 
