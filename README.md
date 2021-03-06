@@ -4,6 +4,15 @@
 
 # kbcQuizzo
 
+![Project Language](https://img.shields.io/static/v1?label=language&message=javascript&color=yellow)
+![Project Type](https://img.shields.io/static/v1?label=type&message=application&color=blue)
+![Current Version](https://img.shields.io/static/v1?label=latest-version&message=v1.0.4&color=lightgrey)
+![Stable Version](https://img.shields.io/static/v1?label=latest-version&message=not-released&color=red)
+![Maintained](https://img.shields.io/static/v1?label=maintained&message=yes&color=green)
+![Ask Me Anything](https://img.shields.io/static/v1?label=ask-me&message=anything&color=green)
+[![Website Up](https://img.shields.io/static/v1?label=website&message=up&color=orange)](https://hind-sagar-biswas.github.io/kbcQuizzo)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 A JavaScript Quiz/Trivia Application
 
 ## Color Pallets
@@ -111,6 +120,7 @@ To add the codes, follow the steps below:
 1. In the file, Paste The Code after the first third bracket as shown below:
    
    ```javascript
+   applicationData [...],
    data = [
    //Paste the codes here
    	{
