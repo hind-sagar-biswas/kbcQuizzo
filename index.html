@@ -6,15 +6,15 @@
 	<meta http-equiv="content-type" content="text/html">
     
 	<meta name="format-detection" content="telephone=yes"/>
-	<meta name="HandheldFriendly" content="true"/> 
+ <meta name="HandheldFriendly" content="true"/> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	<title>KBC Quizzo v1.0.4</title>
+	<title>KBC Quizzo v1.0.5</title>
 	
 	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
-	
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css" media="(min-width:768px)">
+	<link rel="stylesheet" href="style-screen.css" media="screen and (max-width:768px)">
 	
 	<script type="text/javascript" src="qna.json"></script>
 	<script type="text/javascript" src="app.js" defer></script>
@@ -44,12 +44,16 @@
  <section id="main-container">
 	<div id="question-box">
 		<div id="scoreBoard">
-			<h2><span id="title">SCORE </span><span id="currentScore">00</span> | <span id="totalScore">15</span></h2>
+			<h2><span id="title"></span> <span id="currentScore"></span> | <span id="totalScore"></span></h2>
 		</div>
-		<div style="position:relative;">
+		<div id="qna-box-holder">
 			<div id="qna-box">
+				<div id="prizeDotHolder">
+					
+				</div>
 				<h4 id="questionHolder"> <span id="questionNumber"></span>. <span id="question"></span></h4>
 				<ul id="options"></ul>
+				<div id="questionBackground"></div>
 			</div>
 			<div id="start-box">
 				<center>
