@@ -40,7 +40,17 @@ var validSubCatagories = {
 	],
 	generalKnowledge : [
 		"geography",
-		"generalScience"
+		"generalScience",
+		"currentAffairs"
+	],
+	entertainment : [
+		"movies",
+		"music",
+		"animations",
+		"tvShows",
+		"gaming",
+		"sports",
+		"webSeries"
 	]
 }
 
@@ -51,6 +61,7 @@ const subCategoryInput = form["subCategory"];
 const difficultyInput = form["difficulty"];
 const answerInput = form["answer"];
 const optionInput = form["options"];
+const categoryOptions = document.getElementById("category");
 const subcategoryDatalist = document.getElementById("subcategoryDatalist");
 const output = document.getElementById("output");
 const outputTextarea = document.getElementById("outputTextarea");
@@ -80,7 +91,7 @@ function generateCode() {
 	}
 	
 	questionInput.value = "";
-	categoryInput.value = "";
+	categoryInput.value = "science";
 	subCategoryInput.value = "";
 	answerInput.value = "";
 	optionInput.value = "";
@@ -122,4 +133,8 @@ function copyToClipboard(targetId) {
 function popup(targetId) {
   var popup = document.getElementById(targetId);
   popup.classList.toggle("show");
+}
+
+for(validCategory in validSubCatagories){
+	categoryOptions.innerHTML += `<option value="${validCategory}">${validCategory}</option>`;
 }

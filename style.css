@@ -32,6 +32,10 @@ body{
 	font-size: 15px;
 	color: var(--text);
 	background: var(--secondary);
+	background: url(images/backgroundMD.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 header{
 	padding: 10px;
@@ -54,6 +58,10 @@ ul#options li{
 	border: 2px solid var(--primary);
 	transition: all 0.3s;
 }
+#prizeDotHolder{
+	none
+}
+#qna-box-holder{position:relative;}
 #question-box,
 #prizeListBox{
 	max-width: 450px;
@@ -244,18 +252,10 @@ ul#options li{
 	100%{transform: rotate(180deg);}
 }
 
-@media(min-width: 768px){
-	#main-container{
+#main-container{
 		display: flex;
 		justify-content: center;
-	}
-	#prizeListBox{
-		flex-grow: 1;
-	}
 }
-
-@media(max-width: 768px){
-	#options{
-	grid-template-columns: 100%;
-}
+#prizeListBox{
+	flex-grow: 1;
 }
