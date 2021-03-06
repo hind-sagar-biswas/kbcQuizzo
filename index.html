@@ -54,13 +54,13 @@
 			<div id="start-box">
 				<center>
 					<h1>Are you Ready?</h1>
-					<button onclick="document.getElementById('start-box').style = 'pointer-events: none; opacity: 0;'">YES</button>
+					<button onclick="document.getElementById('start-box').style = 'pointer-events: none; opacity: 0;'; drum.play()">YES</button>
 				</center>
 			</div>
 		</div>
 		
 		<div id="button-box">
-			<button id="next-button" onclick="updateQuestion()">Next</button>
+			<button id="next-button" onclick="next.play(); updateQuestion();">Next</button>
 			<button id="quit-button" onclick="qnaOver()">Quit</button>
 		</div>
 	</div>

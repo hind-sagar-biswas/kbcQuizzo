@@ -24,6 +24,24 @@ var prizes = [
 	"10000000$",
 ];
 
+//AUDIO OBJECTS
+const correctAnswer = new Audio();
+const wrongAnswer = new Audio();
+const drum = new Audio();
+const levelUp = new Audio();
+const next = new Audio();
+const popUp = new Audio();
+const completed = new Audio();
+
+correctAnswer.src = 'audio/positive-notification.wav';
+wrongAnswer.src = 'audio/wrong-answer.wav';
+drum.src = 'audio/drums.wav';
+levelUp.src = 'audio/correct-answer-reward.wav';
+completed.src = 'audio/completed.wav';
+next.src = 'audio/next.wav';
+popUp.src = 'audio/popup.wav';
+
+
 //SELECTORS
 const title = document.getElementById("title");
 const versionOutput = document.getElementById("version");
@@ -36,7 +54,7 @@ const currentScoreBoard = document.getElementById("currentScore");
 const totalScoreBoard = document.getElementById("totalScore");
 const loader = document.getElementById("loader");
 const prizeList = document.getElementById("prizes");
-var infoBox = document.getElementById("applicationInfo");
+const infoBox = document.getElementById("applicationInfo");
 const infoBody = document.getElementById("infoBody");
 const infoTrigger = document.getElementById("checkInfo");
 const infoBoxClose = document.getElementsByClassName("close")[0];
@@ -44,13 +62,16 @@ const infoBoxClose = document.getElementsByClassName("close")[0];
 
 //EVENTS
 infoTrigger.onclick = function() {
+  popUp.play();
   infoBox.style.display = "block";
 }
 infoBoxClose.onclick = function() {
+  popUp.play();
   infoBox.style.display = "none";
 }
 window.onclick = function(event) {
   if (event.target == infoBox) {
+    popUp.play();
     infoBox.style.display = "none";
   }
 }
@@ -87,8 +108,10 @@ function updatePrizeList() {
 function setupDifficulty() {
 	if(currentScore == 10) {
 		currentDifficulty = "hard";
+		levelUp.play();
 		setupQuestionSets();
 	}else if(currentScore == 5) {
+		levelUp.play();
 		currentDifficulty = "medium";
 		setupQuestionSets();
 	}
@@ -140,7 +163,7 @@ function checkOption(input) {
 			selectedOption.classList.add("correct");
 			currentScore++;
 			currentScoreBoard.innerHTML = zfill(currentScore);
-			
+			correctAnswer.play();
 			if(quizNotFinished) {
 				nextButton.style =	"background: var(--success); pointer-events: all;";
 			}else {
@@ -148,6 +171,7 @@ function checkOption(input) {
 			}
 		}else {
 			selectedOption.classList.add("incorrect");
+			wrongAnswer.play();
 			qnaOver();
 			return;
 		}
@@ -170,7 +194,10 @@ function checkAnswer(input) {
 }
 
 function checkComplete() {
-	if(currentScore == totalScore) return quizNotFinished = false;
+	if(currentScore == totalScore) {
+		completed.play();
+		return quizNotFinished = false;
+	}
 }
 
 function shuffle(array) {
