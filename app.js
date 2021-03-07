@@ -50,7 +50,7 @@ const questionSlot = document.getElementById("question");
 const questionNo = document.getElementById("questionNumber");
 const optionSlot = document.getElementById("options");
 const nextButton = document.getElementById("next-button");
-const scoreBoardTitle = document.getElementById("currentScore");
+const scoreBoardTitle = document.getElementById("scoreBoardTitle");
 const currentScoreBoard = document.getElementById("currentScore");
 const totalScoreBoard = document.getElementById("totalScore");
 const loader = document.getElementById("loader");
@@ -108,7 +108,7 @@ function updatePrizeList() {
 		if(prizeNumber == questionSet) {
 			prizeList.innerHTML += `<li class="current"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
 		}else if(prizeNumber < questionSet) {
-			prizeList.innerHTML += `<li class="passed"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
+			prizeList.innerHTML += `<li class="passed"><span id="prizeNumber">${zfill(prizeNumber + 1)}. <i class="fas fa-check"></i></span>${prizes[prizeNumber]}</li>`;
 		}else {
 			prizeList.innerHTML += `<li><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
 		}
@@ -141,7 +141,7 @@ function createQuestion() {
 function displayQuestion() {
 	nextButton.style =	"background: #759c82; pointer-events: none;";
 	questionSlot.innerHTML = currentQuestion;
-	questionNo.innerHTML = currentScore + 1;
+	questionNo.innerHTML = (currentScore + 1) + " ";
 	
 	optionSlot.innerHTML = "";
 	
@@ -268,7 +268,7 @@ setInterval(rollDice, 6000);
 //MAIN FLOW
 scoreBoardTitle.innerHTML = "SCORE";
 currentScoreBoard.innerHTML = "00";
-currentScoreBoard.innerHTML = "15";
+totalScoreBoard.innerHTML = "15";
 title.innerHTML = appData.name;
 versionOutput.innerHTML = appData.versionData.preRelease.tag;
 infoBody.innerHTML = `

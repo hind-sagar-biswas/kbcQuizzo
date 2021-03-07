@@ -1,24 +1,10 @@
 :root{
-	/* Pallet One */
-	--pallet-one-primary: #55acff;
-	--pallet-one-secondary: #0a1640;
-	--pallet-one-text: white;
-	--pallet-one-success: #24f100;
-	--pallet-one-danger: #f13b13;
-	
-	/* Pallet Two */
-	--pallet-two-primary: #79addc;
-	--pallet-two-secondary: #2c363f;
-	--pallet-two-text: #f1ecce;
-	--pallet-two-success: #9ae19d;
-	--pallet-two-danger: #ef476f;
-	
-	/* Pallet Setup */
-	--primary: var(--pallet-two-primary);
-	--secondary: var(--pallet-two-secondary);
-	--text: var(--pallet-two-text);
-	--success: var(--pallet-two-success);
-	--danger: var(--pallet-two-danger);
+	--primary: #6DE0D9;
+	--primary-gradient: linear-gradient( #DAFAF9, #6DE0D9);
+	--secondary: #2c363f;
+	--text: #076786;
+	--success: #9ae19d;
+	--danger: #ef476f;
 }
 *{
 	margin: 0;
@@ -32,7 +18,7 @@ body{
 	font-size: 15px;
 	color: var(--text);
 	background: var(--secondary);
-	background: url(images/backgroundMD.jpeg);
+	background: var(--primary-gradient);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -49,166 +35,10 @@ a{
 }
 button{
 	outline: none !important;
+	font-weight: bold;
+	color: white;
 }
 ul li{list-style-type: none;}
-ul#options li{
-	padding: 0.5em 1em;
-	margin: 0.5em 1em;
-	border-radius: 5px;
-	border: 2px solid var(--primary);
-	transition: all 0.3s;
-}
-#prizeDotHolder{
-	none
-}
-#qna-box-holder{position:relative;}
-#question-box,
-#prizeListBox{
-	max-width: 450px;
-	position: relative;
-	padding: 10px;
-}
-.info{
-	text-decoration: underline;
-	color: var(--primary);
-}
-#prizes{
-	padding: 10px;
-}
-#prizes li{
-	display: flex;
-	border-radius: 0;
-}
-#prizes li #prizeNumber,
-#title{
-	flex-grow: 1;
-}
-#qna-box,
-#prizeList{
-	width: 100%;
-	border: 3px solid var(--primary);
-	border-radius: 5px;
-}
-#questionHolder{
-	color: var(--primary);
-	margin: 0.5em 1em;
-}
-#options{
-	display: grid;
-	grid-template-columns: 50% 50%;
-	justify-content: space-between;
-	align-content: space-between;
-}
-.current{
-	background: var(--primary);
-	color: var(--secondary);
-	padding: 3px;
-	border-radius: 5px;
-}
-.passed{	
-	color: var(--success);
-}
-.correct{
-	background: var(--success);
-	border: 3px solid var(--success) !important;
-	color: var(--secondary);
-}
-.incorrect{
-	background: var(--danger);
-	border: 3px solid var(--danger) !important;
-}
-#button-box{
-	padding: 1em 0;
-	display: flex;
-	justify-content: space-between;
-}
-#button-box button{
-	width: 48%;
-	height: 50px;
-	border-radius: 5px;
-	transition: all 0.3s;
-}
-#next-button{
-	pointer-events: none;
-	background: #759c82;
-	border: 2px solid var(--success);
-	color: var(--secondary);
-}
-#quit-button{
-	background: var(--danger);
-	color: var(--text);
-	border: 2px solid var(--danger);
-}
-.disabled{
-	opacity:0.5;
-	pointer-events: none;
-}
-#start-box{
-	background: var(--primary);
-	color: var(--secondary);
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 5px;
-	transition: all 0.3s;
-}
-#start-box center{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-}
-#start-box center button{
-	height: 50px;
-	width: 150px;
-	background: var(--secondary);
-	color: var(--text);
-	border: none;
-	border-radius: 5px;
-}
-#loader{
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	width: 100vw;
-	height: 100vh;
-	background: var(--primary);
-	z-index: 50;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	transition: all 0.6s;
-}
-#dice{
-	animation: diceSpin 1s linear 7;
-}
-
-#scoreBoard{
-	width: 100%;
-	height: 70px;
-	padding: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: var(--primary);
-	color: var(--text);
-	border-radius: 5px;
-	margin: 0 0 10px 0;
-}
-#totalScore,
-#currentScore{
-	display: inline-block;
-	padding: 0.5em;
-	border-radius: 5px;
-	background: var(--secondary);
-	color: var(--primary);
-	text-align: center;
-}
-#scoreBoard #title{flex:1;}
 .modal {
   display: none; 
   position: fixed; 
@@ -246,16 +76,188 @@ ul#options li{
   cursor: pointer;
 }
 
+#loader{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 100vh;
+	background: var(--primary);
+	z-index: 50;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.6s;
+}
+#dice{
+	animation: diceSpin 1s linear 7;
+}
+#main-container{
+	background: rgba( 225, 225, 225, 0.3 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.30 );
+	backdrop-filter: blur( 4px );
+	-webkit-backdrop-filter: blur( 4px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.68 );
+	width: 750px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#scoreBoard{
+	width: 100%;
+	height: 70px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--text);
+	border-radius: 5px;
+	margin: 0 0 10px 0;
+}
+#totalScore,
+#currentScore{
+	display: inline-block;
+	padding: 0.5em;
+	border-radius: 5px;
+	background: var(--secondary);
+	color: var(--primary);
+	text-align: center;
+}
+#scoreBoard #scoreBoardTitle{flex-grow:1;}
+#question-box{
+	width: 70%;
+	flex-grow: 1;
+	padding: 10px;
+	position:relative;
+	height: calc((30px * 15) + 20px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#questionHolder{
+	padding: 10px;
+	margin: 10px;
+	background: rgba( 225, 225, 225, 0.3 );
+	box-shadow: 0 8px 16px 0 rgba( 31, 38, 135, 0.30 );
+	backdrop-filter: blur( 4px );
+	-webkit-backdrop-filter: blur( 4px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.68 );
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+}
+#options{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	justify-content: space-between;
+	align-content: space-between;
+}
+#options li{
+	background: white;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 5px;
+	min-height: 70px;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 8px 16px 0 rgba( 31, 38, 135, 0.30 );
+}
+#options li:click{
+	color: white;
+	background: var(--text);
+}
+#prizeDotHolder{
+	display: none;
+}
+#prizeListBox{
+	width: 30%;
+	background: var(--primary);
+	border-radius: 0 10px 10px 0;
+	border: 3px solid var(--primary);
+	border-left: 3px solid var(--text);
+}
+#prizes{
+	padding: 10px;
+}
+#prizes li{
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	height: 30px;
+	border-radius: 0;
+}
+.current{
+	background: rgba( 225, 225, 225, 0.3 );
+	box-shadow: 0 5px 10px 0 rgba( 31, 38, 135, 0.30 );
+	backdrop-filter: blur( 4px );
+	-webkit-backdrop-filter: blur( 4px );
+	border-radius: 5px !important;
+	border: 1px solid rgba( 255, 255, 255, 0.68 );
+}
+#prizes li #prizeNumber,
+#title{
+	flex-grow: 1;
+}
+#start-box{
+	background: var(--primary);
+	color: var(--secondary);
+	position: absolute;
+	top: -20px;
+	left: 0;
+	width: 100%;
+	height: calc(100% + 40px);
+	border-radius: 10px 0 0 10px;
+	transition: all 0.3s;
+}
+#start-box center{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+#start-box center button{
+	height: 50px;
+	width: 150px;
+	background: var(--secondary);
+	border: none;
+	border-radius: 5px;
+}
+#button-box{
+	padding: 1em 0;
+	display: flex;
+	justify-content: space-between;
+}
+#button-box button{
+	width: 48%;
+	height: 50px;
+	border-radius: 5px;
+	transition: all 0.3s;
+}
+#next-button{
+	pointer-events: none;
+	background: #759c82;
+	border: 2px solid var(--success);
+}
+#quit-button{
+	background: var(--danger);
+	border: 2px solid var(--danger);
+}
+.correct{
+	border: 3px solid var(--success) !important;
+	color: var(--success);
+}
+.incorrect{
+	border: 3px solid var(--danger) !important;
+	color: var(--danger);
+}
 @keyframes diceSpin{
 	0%{transform: rotate(0deg);}
 	90%{transform: rotate(0deg);}
 	100%{transform: rotate(180deg);}
-}
-
-#main-container{
-		display: flex;
-		justify-content: center;
-}
-#prizeListBox{
-	flex-grow: 1;
 }
