@@ -45,11 +45,14 @@ popUp.src = 'audio/popup.wav';
 //SELECTORS
 const title = document.getElementById("title");
 const versionOutput = document.getElementById("version");
+const startBox = document.getElementById('start-box');
 const qnaSlot = document.getElementById("qna-box");
 const questionSlot = document.getElementById("question");
 const questionNo = document.getElementById("questionNumber");
 const optionSlot = document.getElementById("options");
+const startButton = document.getElementById("start-button");
 const nextButton = document.getElementById("next-button");
+const quitButton = document.getElementById("quit-button");
 const scoreBoardTitle = document.getElementById("scoreBoardTitle");
 const currentScoreBoard = document.getElementById("currentScore");
 const totalScoreBoard = document.getElementById("totalScore");
@@ -77,6 +80,16 @@ window.onclick = function(event) {
     infoBox.style.display = "none";
   }
 }
+startButton.addEventListener("click", () => {
+	startBox.style = 'pointer-events: none; opacity: 0;';
+	drum.play();
+});
+quitButton.addEventListener("click", () => {
+	if(confirm("Are you sure that you want to quit the game?")) {
+		qnaOver();
+		completed.play();
+	}
+});
 
 //JSON FETCH
 appData = applicationData;
@@ -97,17 +110,17 @@ function updatePrizeList() {
 	for(var p = 0; p < 15; p++){
 		var prizeNumber = 14 - p;
 		
-		if(p == questionSet) {
+		if(p == currentScore) {
 			prizeDotHolder.innerHTML += `<div id="current" class="popup"><span class="popuptext" id="prizeMessage">${prizes[p]}</span></div>`;
-		}else if(p < questionSet) {
+		}else if(p < currentScore) {
 			prizeDotHolder.innerHTML += `<div class="passed"></div>`;
 		}else {
 			prizeDotHolder.innerHTML += `<div></div>`;
 		}
 		
-		if(prizeNumber == questionSet) {
+		if(prizeNumber == currentScore) {
 			prizeList.innerHTML += `<li class="current"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
-		}else if(prizeNumber < questionSet) {
+		}else if(prizeNumber < currentScore) {
 			prizeList.innerHTML += `<li class="passed"><span id="prizeNumber">${zfill(prizeNumber + 1)}. <i class="fas fa-check"></i></span>${prizes[prizeNumber]}</li>`;
 		}else {
 			prizeList.innerHTML += `<li><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
@@ -150,14 +163,29 @@ function displayQuestion() {
 	qnaSlot.style.pointerEvents = "all";
 }
 
-
-
 function countdownTimer() {
 	
 }
 
 function qnaOver() {
-	alert("KBC Over");
+	var message = "Congrats, You've won....";
+	var amountWon;
+	
+	if(!currentScore) {
+		message = "Oops you've won....";
+		amountWon = "Nothing!";
+	}else {
+		amountWon = prizes[currentScore - 1];
+	}
+	
+	startBox.innerHTML = `
+				<center>
+					<h2>Trivia Over!</h2>
+					<h3>${message}</h3>
+					<h1>${amountWon}</h1>
+					<button onclick="reloadQuiz()">PLAY AGAIN?</button>
+				</center>`;
+	startBox.style = 'pointer-events: all; opacity: 1;';
 	quizNotFinished = false;
 }
 
@@ -178,12 +206,12 @@ function checkOption(input) {
 			if(quizNotFinished) {
 				nextButton.style =	"background: var(--success); pointer-events: all;";
 			}else {
-				qnaOver();
+				setTimeout(() => qnaOver(), 1000);
 			}
 		}else {
 			selectedOption.classList.add("incorrect");
 			wrongAnswer.play();
-			qnaOver();
+			setTimeout(() => qnaOver(), 1000);
 			return;
 		}
 	}, 500);
@@ -213,6 +241,10 @@ function checkComplete() {
 
 function shuffle(array) {
 	return array.sort(() => Math.random() - 0.5);
+}
+
+function reloadQuiz() {
+	location.reload();
 }
 
 function preLoad() {
