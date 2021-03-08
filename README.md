@@ -161,3 +161,16 @@ To add the codes, follow the steps below:
 1. Now create a [Pull Request](https://github.com/hind-sagar-biswas/kbcQuizzo/pulls)
 
 1. Your code will then be reviewed and if everything is clear then it'll be merged
+
+## License
+
+This code has been licensed under `GNU AGPLv3` open source copyleft license. 
+
+## Author
+
+*Hind Sagar Biswas*
+
+**Website:** [https://hindbiswas.000webhostapp.com/](https://hindbiswas.000webhostapp.com/)
+
+[![Author Facebook](https://img.shields.io/static/v1?label=facebook&message=hindsagar.biswas&style=social&logo=facebook)](https://m.facebook.com/hindsagar.biswas)
+[![Author Twitter](https://img.shields.io/static/v1?label=twitter&message=@hind_biswas&style=social&logo=twitter)](https://twitter.com/hind_biswas)
