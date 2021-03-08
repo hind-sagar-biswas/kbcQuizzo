@@ -97,17 +97,17 @@ function updatePrizeList() {
 	for(var p = 0; p < 15; p++){
 		var prizeNumber = 14 - p;
 		
-		if(p == questionSet) {
+		if(p == currentScore) {
 			prizeDotHolder.innerHTML += `<div id="current" class="popup"><span class="popuptext" id="prizeMessage">${prizes[p]}</span></div>`;
-		}else if(p < questionSet) {
+		}else if(p < currentScore) {
 			prizeDotHolder.innerHTML += `<div class="passed"></div>`;
 		}else {
 			prizeDotHolder.innerHTML += `<div></div>`;
 		}
 		
-		if(prizeNumber == questionSet) {
+		if(prizeNumber == currentScore) {
 			prizeList.innerHTML += `<li class="current"><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
-		}else if(prizeNumber < questionSet) {
+		}else if(prizeNumber < currentScore) {
 			prizeList.innerHTML += `<li class="passed"><span id="prizeNumber">${zfill(prizeNumber + 1)}. <i class="fas fa-check"></i></span>${prizes[prizeNumber]}</li>`;
 		}else {
 			prizeList.innerHTML += `<li><span id="prizeNumber">${zfill(prizeNumber + 1)}. </span>${prizes[prizeNumber]}</li>`;
