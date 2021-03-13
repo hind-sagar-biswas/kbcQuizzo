@@ -42,7 +42,8 @@ data = [
 				"V354 Cephei",
 				"Sun"
 			]
-		},		{
+		},
+		{
 			"question" : "When the moon appears darkened as it passes into the earth's shadow?",
 			"category" : "generalKnowledge",
 			"subCategory" : "null",
@@ -53,7 +54,8 @@ data = [
 				"Apocalyps",
 				"Solar Eclipse"
 			]
-		},		{
+		},
+		{
 			"question" : "What is the most precious material of the world?",
 			"category" : "generalKnowledge",
 			"subCategory" : "null",
@@ -64,10 +66,11 @@ data = [
 				"Californium",
 				"Dark-matter"
 			]
-		},		{
+		},
+		{
 			"question" : "Which planet is called the sister of earth?",
-			"category" : "generalKnowledge",
-			"subCategory" : "null",
+			"category" : "science",
+			"subCategory" : "astronomy",
 			"difficulty" : "easy",
 			"answer" : "Venus",
 			"otherOptions" : [
@@ -75,20 +78,21 @@ data = [
 				"Saturn",
 				"Jupiter"
 			]
-		},		{
+		},
+		{
 			"question" : "Which is the largest animal ever lived on earth?",
 			"category" : "generalKnowledge",
 			"subCategory" : "null",
 			"difficulty" : "easy",
 			"answer" : "Blue Whale",
 			"otherOptions" : [
-				"",
 				"Argentinosorus",
 				"Titanoboa"
 				"Megalodon"
 			]
 		
 		},
+		{
 			"question" : "Which is the slowest animal?",
 			"category" : "generalKnowledge",
 			"subCategory" : "null",
