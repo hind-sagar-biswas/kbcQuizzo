@@ -42,7 +42,8 @@ data = [
 				"Avatar",
 				"Star Wars: The Force Awakens"
 			]
-		},		{
+		},
+		{
 			"question" : "What was the first feature-length animated film ever released?",
 			"category" : "entertainment",
 			"subCategory" : "animations",
@@ -53,7 +54,8 @@ data = [
 				"Fantasia",
 				"Dumbo"
 			]
-		},		{
+		},
+		{
 			"question" : "What team has the longest winning streak in NBA history?",
 			"category" : "entertainment",
 			"subCategory" : "sports",
