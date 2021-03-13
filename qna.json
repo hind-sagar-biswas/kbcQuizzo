@@ -32,6 +32,75 @@ applicationData = {
 }
 data = [
 		{
+			"question" : "What is the name of the largest star of the world ever discovered by human?",
+			"category" : "generalKnowledge",
+			"subCategory" : "null",
+			"difficulty" : "easy",
+			"answer" : "UY Scuti",
+			"otherOptions" : [
+				"KW Sagitarii",
+				"V354 Cephei",
+				"Sun"
+			]
+		},		{
+			"question" : "When the moon appears darkened as it passes into the earth's shadow?",
+			"category" : "generalKnowledge",
+			"subCategory" : "null",
+			"difficulty" : "easy",
+			"answer" : "Lunar Eclipse",
+			"otherOptions" : [
+				"Moon Eclipse",
+				"Apocalyps",
+				"Solar Eclipse"
+			]
+		},		{
+			"question" : "What is the most precious material of the world?",
+			"category" : "generalKnowledge",
+			"subCategory" : "null",
+			"difficulty" : "easy",
+			"answer" : "Antimatter",
+			"otherOptions" : [
+				"Diamond",
+				"Californium",
+				"Dark-matter"
+			]
+		},		{
+			"question" : "Which planet is called the sister of earth?",
+			"category" : "generalKnowledge",
+			"subCategory" : "null",
+			"difficulty" : "easy",
+			"answer" : "Venus",
+			"otherOptions" : [
+				"Mars",
+				"Saturn",
+				"Jupiter"
+			]
+		},		{
+			"question" : "Which is the largest animal ever lived on earth?",
+			"category" : "generalKnowledge",
+			"subCategory" : "null",
+			"difficulty" : "easy",
+			"answer" : "Blue Whale",
+			"otherOptions" : [
+				"",
+				"Argentinosorus",
+				"Titanoboa"
+				"Megalodon"
+			]
+		
+		},
+			"question" : "Which is the slowest animal?",
+			"category" : "generalKnowledge",
+			"subCategory" : "null",
+			"difficulty" : "easy",
+			"answer" : "Sloth",
+			"otherOptions" : [
+				"Snail",
+				"Lobster",
+				"Tortoise"
+			]
+		},
+		{
 			"question" : "What is the highest-grossing film of all time without taking inflation into account?",
 			"category" : "entertainment",
 			"subCategory" : "movies",
